@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="1_1_0"
+version="1_1_1"
 
 pdflatex -output-directory=out main.tex
 
