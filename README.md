@@ -1,4 +1,4 @@
-# Sokolská kroniká
+# Sokolská kronika
 
 TODO: this readme
 
