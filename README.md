@@ -1,4 +1,4 @@
-# Sokolská kronika
+# Kronika TJ Sokol Poruba
 
 TODO: this readme
 
