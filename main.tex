@@ -1,36 +1,111 @@
-\documentclass[openany]{report}
+\documentclass[twoside,openany,11pt]{report}
 
 \usepackage{pgffor}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage{graphicx}
-% \usepackage[margin=0in]{geometry}
-\usepackage[left=0in, right=0in, top=0in, bottom=0.5in]{geometry}
+\usepackage[left=1in, right=1in, top=1in, bottom=0.5in]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage[bookmarksopen=true]{hyperref}
 \usepackage{csquotes}
 \usepackage{bookmark}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{xcolor}
 
 
 
-% \newcommand{\fakesection}[1]{%
-%   \par\refstepcounter{section}% Increase section counter
-%   \chaptermark{#1}% Add section mark (header)
-%   \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}% Add section to ToC
-%   % Add more content here, if needed.
-% }
+% Typography settings
+\setstretch{1.15}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{1em}
+
+% Color definitions
+\definecolor{sokolred}{RGB}{139,0,0}
+\definecolor{darkgray}{RGB}{60,60,60}
+
+% Chapter and section styling
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{sokolred}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{sokolred}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{darkgray}}
+  {\thesubsection}{1em}{}
+
+% Spacing around titles
+\titlespacing*{\chapter}{0pt}{20pt}{40pt}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Page headers and footers
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Table of contents styling
+\renewcommand{\cftchapfont}{\bfseries\large}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftchappagefont}{\bfseries}
+\setlength{\cftbeforechapskip}{1em}
+\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.2em}
+
+% Hyperlink colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=sokolred,
+    urlcolor=blue,
+    citecolor=sokolred,
+    bookmarksopen=true,
+    bookmarksnumbered=true
+}
 
 \begin{document}
 
-\newgeometry{margin=0.5in}
+% Title page
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\Huge\bfseries\color{sokolred} Sokolská kronika}\\[1cm]
+{\Large\bfseries TJ Sokol Poruba}\\[2cm]
+\includegraphics[width=0.3\textwidth]{images/uvodni_slovo/1.jpeg}\\[2cm]
+{\large Digitální vydání}\\[0.5cm]
+{\normalsize \today}
+\end{center}
+\vfill
+\clearpage
+
+% Table of contents
+\newgeometry{margin=1in}
+\pagestyle{plain}
 \tableofcontents
+\clearpage
 \restoregeometry
+\pagestyle{fancy}
 
 
-\newgeometry{margin=0.5in}
+\newgeometry{margin=1in}
 
-\section{Úvodní slovo kronikáře TJ Sokol Poruba}
+\chapter*{Úvodní slova}
+\addcontentsline{toc}{chapter}{Úvodní slova}
+
+\section*{Úvodní slovo kronikáře TJ Sokol Poruba}
+\addcontentsline{toc}{section}{Úvodní slovo kronikáře TJ Sokol Poruba}
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/1.jpeg}
 
@@ -38,7 +113,11 @@
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/3.jpeg}
 
-\section{Slovo autora sazby digitální kroniky}
+\clearpage
+
+\section*{Slovo autora sazby digitální kroniky}
+\addcontentsline{toc}{section}{Slovo autora sazby digitální kroniky}
+\markright{Slovo autora sazby digitální kroniky}
 
 Digitální kronika, kterou nyní čtete, je výsledkem dobrovolnické práce nadšených jedinců. Jako autor digitální sazby mám tu čest být zodpovědný za technickou produkci tohoto digitálního dokumentu, jeho následné uveřejnění a aktualizování.
 
@@ -46,27 +125,26 @@ Jelikož se jedná o především digitální dokument, obsah je interaktivní. 
 
 	Projekt je dostupný na stránce \href{https://github.com/vichr-vita/sokolska-kronika}{GitHub} (\emph{https://github.com/vichr-vita/sokolska-kronika}), která umožňuje poskytnutí technické zpětné vazby a návrhů na úpravu. Velmi si vážím jakékoliv zpětné vazby, která by mohla přispět k dalšímu zlepšení sazby a celkového vzhledu dokumentu. Vaše názory a návrhy jsou vítány a mohou být zaslány prostřednictvím GitHubu. V~případě jiných dotazů je možné psát i na email \emph{me@vichr.me}.
 
-Toto dílo vzniká za použití volně dostupného open-source jazyka pro typografické zpracování a sazbu, \LaTeX. Děkuji všem, kteří se na tomto projektu podílejí, a doufám, že vám digitální kronika přinese mnoho užitečných informací a radosti.\\\\
-S úctou a sokolským \enquote{Nazdar!},\\
+Toto dílo vzniká za použití volně dostupného open-source jazyka pro typografické zpracování a sazbu, \LaTeX. Děkuji všem, kteří se na tomto projektu podílejí, a doufám, že vám digitální kronika přinese mnoho užitečných informací a radosti.
+
+\vspace{1cm}
+\noindent S úctou a sokolským \enquote{Nazdar!},\\
 Vít Chrubasík
+
+\clearpage
 \restoregeometry
 
-% OLD BEGINS %
 \chapter{Předválečná kronika}
 
-\foreach \x in {1,...,164} {
-
-	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/stara_kronika_merged/\x.jpg}
-
-}
-
-
-% OLD ENDS %
+\newgeometry{margin=1in}
+\input{stara_kronika.tex}
+\restoregeometry
 
 
 \chapter{Současná kronika}
 
 
+\newgeometry{margin=0.5in}
 \section{Výběr z rodinné kroniky Bártů}
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/v_porube_jsem_prebral.jpeg}
@@ -87,9 +165,10 @@ Vít Chrubasík
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/po_dlouhe_a_take.jpeg}
 
+\clearpage
+\restoregeometry
 
-
-\newgeometry{margin=0.5in}
+\newgeometry{margin=1in}
 \subsection{Vznik a historický přehled rozvoje Tělocvičné jednoty Sokol Poruba}
 
 (výběr z publikací Ing. Jiřího Klose \enquote{110 let TJ Sokol Poruba} a \enquote{Historie Tělocvičné jednoty Sokol Poruba 1894 – 2014} )
@@ -137,9 +216,10 @@ Oddíl házené sdružuje družstva minižaček, žaček, dorostenek a žen v ce
 Celé období od nástupu Antonína Balnara do funkce starosty TJ Sokol Poruba je charakterizováno úsilím vedoucím k zajišťování finančních prostředků na technické zhodnocování sportovišť a jednáním směřujcím k vybudování nové sportovní haly pro kolektivní hry, které ve sportovní činnosti jednoty převládají, bohužel do r. 2014 se ani  „nekoplo“. Se starostou Antonínem Balnarem se na zabezpečení chodu jednoty v minulých létech nejvíce podíleli Drahomíra Macková, Šárka Budíková, Bohumila Pyšová, Jiří Klásek a ing. Jiří Klos. Ve sportovních oddílech velmi dobře pracovali Miroslav Bárta (házená), Kateřina Grabovská a Monika Struminská (volejbal), Tomáš Macko (hokejbal), Mgr. Sylva Roháčková (STYX), Vítězslav Smuž a Tomáš Maceček (box), Ludmila Bestová a ing. Monika Horečková (všestrannost), ing. Boris Blažej a Dominik Králík. Ale i další desítky jejich spolupracovníků naplňovali v praxi sokolské heslo „Ni zisk, ni slávu!“
 
 Ing. Jiří Klos publikaci „Historie Tělocvičné jednoty Sokol Poruba 1894 – 2014“ zakončuje slovy: „Chceme i v budoucnu v duchu našich předchůdců usilovat o utužování tělesného zdraví občanů a vytváření správných charakterových a morálně volních vlastností u členů tak, jak to vyjadřují Stanovy České obce sokolské. Sto dvacet let jednoty představuje kus historie, kterou vytvářeli obětaví funkcionáři, trenéři a cvičitelé spolu s výbornými sportovci. Bohaté dědictví z minulosti nás zavazuje, abychom je rozvíjeli nejenom pro blaho svých členů, ale pro blaho všech občanů obce a zejména mládeže. Tělocvičné jednotě Sokol Poruba přejeme, aby ve své činnosti neochabovala a dále kráčela mužně a neochvějně vpřed za svým cílem povznést tělesně a duševní síly našeho občana.
+\clearpage
 \restoregeometry
 
-
+\newgeometry{margin=0.5in}
 \subsection{Členský sokolský průkaz Lumíra Bárty (1929)}
 
 \foreach \x in {1,...,4} {
@@ -149,10 +229,11 @@ Ing. Jiří Klos publikaci „Historie Tělocvičné jednoty Sokol Poruba 1894 �
 }
 
 
+\clearpage
+\restoregeometry
+
 \newgeometry{margin=0.5in}
-
 \section{Historie hokejbalového klubu}
-
 \restoregeometry
 
 \foreach \x in {1,...,6} {
@@ -161,7 +242,8 @@ Ing. Jiří Klos publikaci „Historie Tělocvičné jednoty Sokol Poruba 1894 �
 
 }
 
-\newgeometry{margin=0.5in}
+\clearpage
+\newgeometry{margin=1in}
 \section{Z kroniky oddílu házené TJ Sokol Poruba}
 
 
@@ -184,24 +266,35 @@ Po 5 letém trvání oddílu se probojovalo družstvo dorostenek v r.1978 do nej
 Dnem 1.12.1978 došlo v našem oddíle k významné události. Po dohodě s TJ Vítkovice přešlo její družstvo mužů do naší TJ, která se přejmenovala na Hutní montáže Poruba a bude hrát v krajském přeboru I.tř... V r.1979 pokračuje výstavba házenkářského areálu (nová tribuna, věž s rozhlasem a světelným ukazatelem skóre)...Dne 31.12.2980 došlo opět k výměně kronikáře Tvarůžka a k Peru se opět dostal Jaroslav Luger...Na výroční členské schůzi oddílu házené, konané 16.1.1981 za nečekané účasti téměř 100\% členů, byl zvolen nový výbor ve složení: předseda Miroslav Bárta, hospodář Jaroslav Luger, pokladník Šárka Holáňová...V sezóně 1980-81 příjemně překvapily mladší žákyně, když pod trenérem Antonínem Kučerou nenašly přemožitele a vyhrály svou soutěž. Ve finále o přeborníka Sm kraje družstvo vybojovalo 2.místo. Rovněž ženy pod trenérem Petrem Koutným si vítězstvím krajských přeborů Sm kraje a Jm kraje nečekaně vybojovaly postup do národní ligy. Bohužel v podzimní části se jim nedařilo a rozdílem jediného bodu sestoupily zpět do krajského přeboru... V soutěžním ročníku 1981-82 přibyla do výboru Ivanka Bártová. Družstva mladších i starších žáků trénoval Kožaný Václav, dorostence vedl Ing.Mizera Jiří, muže Trnavský František, mladší žákyně trénovali Fiala Jiří a Roháč, starší žákyně Antonín Kučera, dorostenky Antonín Dohnal a ženy Petr Koutný...V květnu 1983 se dorostenky zúčastnily několika mezinárodních turnajů (v Drážďanech 1.místo, Haloren Halle NDR)...V r.1984 družstvo dorostenek pod trenérem Drahošem postoupilo do 1. dorostenecké ligy. Na podzim r.1984 se družstvo mladších dorostenců v krajském přeboru umístilo na 2.místě, starší dorostenci na 1.místě (získalo 16 bodů, skóre 234:139), mužstvo mužů se umístilo na 3.místě... Ze zprávy o činnosti oddílu házené TJ Hutní montáže Ostrava: \enquote{Dnes je náš oddíl házené největším oddílem v Ostravě, v pravidelných soutěžích startuje 12 družstev...a jméno TJ HM Ostrava se dostává stále častěji do podvědomí sportovní veřejnosti...dvě asfaltová hřiště jsou od jara do podzimu v neustálé permanenci (12 trenérů III.třídy a 3 trenéři Ii.třídy), v zimních měsících trénují družstva v halách na Hrušovské a TJ Sokol Poruba...}
 
 Poslední zápis v kronice je z r.1986, který popisuje podrobné výsledky soutěží všech družstev oddílu házené.
+
+\clearpage
 \restoregeometry
 
+\newgeometry{margin=0.5in}
 \foreach \x in {1,...,9} {
 
 	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/hazena/\x.jpg}
 
 }
 
+\clearpage
+\restoregeometry
+
+\newgeometry{margin=1in}
 \section{Sokolský den}
+\restoregeometry
 
-
+\newgeometry{margin=0.5in}
 \foreach \x in {1,...,2} {
 
 	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/sokolsky_den/sokolsky_den_\x.jpeg}
 
 }
 
+\clearpage
+\restoregeometry
 
+\newgeometry{margin=0.5in}
 \section{Výběr z oddílů}
 
 \foreach \x in {1,...,7} {
