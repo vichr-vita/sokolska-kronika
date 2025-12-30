@@ -1,0 +1,157 @@
+\documentclass[twoside,openany,11pt]{report}
+
+\usepackage{pgffor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage[left=1in, right=1in, top=1in, bottom=0.5in]{geometry}
+\usepackage[export]{adjustbox}
+\usepackage[bookmarksopen=true]{hyperref}
+\usepackage{csquotes}
+\usepackage{bookmark}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+% Box for newspaper clippings
+\newtcolorbox{novinovy-vystrizek}{
+  colback=gray!5,
+  colframe=gray!50,
+  title=Novinový výstřižek,
+  fonttitle=\bfseries\small,
+  boxrule=0.5pt,
+  arc=2pt
+}
+
+
+% don't number sections
+\setcounter{secnumdepth}{0}
+
+% Typography settings
+\setstretch{1.15}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{1em}
+
+% Color definitions
+\definecolor{sokolred}{RGB}{139,0,0}
+\definecolor{darkgray}{RGB}{60,60,60}
+
+% Chapter and section styling
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{sokolred}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{sokolred}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{darkgray}}
+  {\thesubsection}{1em}{}
+
+% Spacing around titles
+\titlespacing*{\chapter}{0pt}{20pt}{40pt}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Page headers and footers
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Table of contents styling
+\renewcommand{\cftchapfont}{\bfseries\large}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftchappagefont}{\bfseries}
+\setlength{\cftbeforechapskip}{1em}
+\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.2em}
+
+% Hyperlink colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=sokolred,
+    urlcolor=blue,
+    citecolor=sokolred,
+    bookmarksopen=true,
+    bookmarksnumbered=true
+}
+
+\begin{document}
+
+% Title page
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\Huge\bfseries\color{sokolred} Předválečná kronika}\\[1cm]
+{\Large\bfseries TJ Sokol Poruba}\\[2cm]
+\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/cover.jpg}\\[2cm]
+{\large Digitální vydání}\\[0.5cm]
+{\normalsize \today}
+\end{center}
+\vfill
+\clearpage
+
+% Table of contents
+\newgeometry{margin=1in}
+\pagestyle{plain}
+\tableofcontents
+\clearpage
+\restoregeometry
+\pagestyle{fancy}
+
+
+\newgeometry{margin=1in}
+
+\chapter*{Úvodní slova}
+\addcontentsline{toc}{chapter}{Úvodní slova}
+
+\section*{Úvodní slovo kronikáře TJ Sokol Poruba}
+\addcontentsline{toc}{section}{Úvodní slovo kronikáře TJ Sokol Poruba}
+
+\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/1.jpeg}
+
+\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/2.jpeg}
+
+\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/3.jpeg}
+
+\clearpage
+
+\section*{Slovo autora sazby digitální kroniky}
+\addcontentsline{toc}{section}{Slovo autora sazby digitální kroniky}
+\markright{Slovo autora sazby digitální kroniky}
+
+Digitální kronika, kterou nyní čtete, je výsledkem dobrovolnické práce nadšených jedinců. Jako autor digitální sazby mám tu čest být zodpovědný za technickou produkci tohoto digitálního dokumentu, jeho následné uveřejnění a aktualizování.
+
+Jelikož se jedná o především digitální dokument, obsah je interaktivní. Ve většině prohlížečů přenositelných digitálních dokumentů (PDF) můžete při kliknutí na položku v obsahu přejít hned na sekci v kronice. Většina prohlížečů dále umožňuje obsah zobrazit zároveň s textem jakožto \enquote{průvodce}. V průvodci interaktivita funguje obdobně.
+
+	Projekt je dostupný na stránce \href{https://github.com/vichr-vita/sokolska-kronika}{GitHub} (\emph{https://github.com/vichr-vita/sokolska-kronika}), která umožňuje poskytnutí technické zpětné vazby a návrhů na úpravu. Velmi si vážím jakékoliv zpětné vazby, která by mohla přispět k dalšímu zlepšení sazby a celkového vzhledu dokumentu. Vaše názory a návrhy jsou vítány a mohou být zaslány prostřednictvím GitHubu. V~případě jiných dotazů je možné psát i na email \emph{me@vichr.me}.
+
+Toto dílo vzniká za použití volně dostupného open-source jazyka pro typografické zpracování a sazbu, \LaTeX. Děkuji všem, kteří se na tomto projektu podílejí, a doufám, že vám digitální kronika přinese mnoho užitečných informací a radosti.
+
+\vspace{1cm}
+\noindent S úctou a sokolským \enquote{Nazdar!},\\
+Vít Chrubasík
+
+\clearpage
+\restoregeometry
+
+\chapter{Předválečná kronika}
+
+\newgeometry{margin=1in}
+\input{stara_kronika.tex}
+\restoregeometry
+
+
+\end{document}
