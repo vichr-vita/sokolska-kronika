@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage[left=1in, right=1in, top=1in, bottom=0.5in]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage[bookmarksopen=true]{hyperref}
@@ -114,13 +115,9 @@
 
 \newgeometry{margin=1in}
 
-\phantomsection
-\chapter*{Úvodní slova}
-\addcontentsline{toc}{chapter}{Úvodní slova}
 
 \phantomsection
-\section*{Úvodní slovo kronikáře TJ Sokol Poruba}
-\addcontentsline{toc}{section}{Úvodní slovo kronikáře TJ Sokol Poruba}
+\section{Úvodní slovo kronikáře TJ Sokol Poruba}
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/1.jpeg}
 
@@ -128,11 +125,9 @@
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/3.jpeg}
 
-\clearpage
 
 \phantomsection
-\section*{Slovo autora sazby digitální kroniky}
-\addcontentsline{toc}{section}{Slovo autora sazby digitální kroniky}
+\section{Slovo autora sazby digitální kroniky}
 \markright{Slovo autora sazby digitální kroniky}
 
 Digitální kronika, kterou nyní čtete, je výsledkem dobrovolnické práce nadšených jedinců. Jako autor digitální sazby mám tu čest být zodpovědný za technickou produkci tohoto digitálního dokumentu, jeho následné uveřejnění a aktualizování.
@@ -149,8 +144,6 @@ Vít Chrubasík
 
 \clearpage
 \restoregeometry
-
-\chapter{Předválečná kronika}
 
 \newgeometry{margin=1in}
 \input{stara_kronika.tex}
