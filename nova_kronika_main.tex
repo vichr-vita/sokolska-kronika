@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage[left=1in, right=1in, top=1in, bottom=0.5in]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage[bookmarksopen=true]{hyperref}
@@ -18,8 +19,21 @@
 \usepackage{setspace}
 \usepackage{tocloft}
 \usepackage{xcolor}
+\usepackage{tcolorbox}
+
+% Box for newspaper clippings
+\newtcolorbox{novinovy-vystrizek}{
+  colback=gray!5,
+  colframe=gray!50,
+  title=Novinový výstřižek,
+  fonttitle=\bfseries\small,
+  boxrule=0.5pt,
+  arc=2pt
+}
 
 
+% don't number sections
+\setcounter{secnumdepth}{0}
 
 % Typography settings
 \setstretch{1.15}
@@ -81,7 +95,7 @@
 \thispagestyle{empty}
 \begin{center}
 \vspace*{2cm}
-{\Huge\bfseries\color{sokolred} Současná kronika}\\[1cm]
+{\Huge\bfseries\color{sokolred} Nová kronika}\\[1cm]
 {\Large\bfseries TJ Sokol Poruba}\\[2cm]
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/cover.jpg}\\[2cm]
 {\large Digitální vydání}\\[0.5cm]
@@ -94,18 +108,15 @@
 \newgeometry{margin=1in}
 \pagestyle{plain}
 \tableofcontents
-\clearpage
 \restoregeometry
 \pagestyle{fancy}
 
-
 \newgeometry{margin=1in}
 
-\chapter*{Úvodní slova}
-\addcontentsline{toc}{chapter}{Úvodní slova}
-
 \section*{Úvodní slovo kronikáře TJ Sokol Poruba}
+\phantomsection
 \addcontentsline{toc}{section}{Úvodní slovo kronikáře TJ Sokol Poruba}
+\markright{Úvodní slovo kronikáře TJ Sokol Poruba}
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/1.jpeg}
 
@@ -113,9 +124,9 @@
 
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/3.jpeg}
 
-\clearpage
 
 \section*{Slovo autora sazby digitální kroniky}
+\phantomsection
 \addcontentsline{toc}{section}{Slovo autora sazby digitální kroniky}
 \markright{Slovo autora sazby digitální kroniky}
 
@@ -134,169 +145,6 @@ Vít Chrubasík
 \clearpage
 \restoregeometry
 
-\chapter{Současná kronika}
-
-
-\newgeometry{margin=0.5in}
-\section{Výběr z rodinné kroniky Bártů}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/v_porube_jsem_prebral.jpeg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/spolku.jpg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/v_sokolu.jpeg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/jednak_take_proto.jpeg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/ze_svinova.jpg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/nasi_cinnost.jpeg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/ukazali.jpeg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/zvlast.jpg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/vyber_rodinna_kronika/po_dlouhe_a_take.jpeg}
-
-\clearpage
-\restoregeometry
-
-\newgeometry{margin=1in}
-\subsection{Vznik a historický přehled rozvoje Tělocvičné jednoty Sokol Poruba}
-
-(výběr z publikací Ing. Jiřího Klose \enquote{110 let TJ Sokol Poruba} a \enquote{Historie Tělocvičné jednoty Sokol Poruba 1894 – 2014} )
-
-\subsection{Dědictví otců}
-
-Tělocvičná jednota Sokol Poruba, která je po Sokolu Opava druhou nejstarší sokolskou jednotou ve Slezsku, byla založena 10.června 1894. S úctou vzpomínáme na naše předchůdce, kteří šířili mezi lidmi pokrok a vlastenecké uvědomění i za cenu mnoha osobních posměšků a  ústrků, jichž se jim dostávalo od tehdejších rakousko-uherských úřadů, ale i některých spoluobčanů. Vážíme si přístupů, kterými dokázali tehdejší zakladatelé Tělocvičné jednoty Sokol Poruba, bratři Adolf a Josef Bárta, Antonín a Adolf Besta, Ignác Blažej, Jan Dědek, Adolf Sokol, Josef Uherek, Ambrož Zdražila, Vladimír Kostřica, MUDr.Jan Moravec, JUDr. Rudolf Hess, Ludvík Dědoch a další, překonávat překážky a předsudky, které se jim stavěly do cesty. Trpělivě budovali tuto jednotku v duchu
-sokolského hesla \enquote{Ni zisk, ni slávu}.
-
-\subsection{Nová sokolovna}
-
-Významným mezníkem v činnosti jednoty se stal rok 1901, kdy došlo k vybudování vlastní sokolovny. Ta se stala nejen důležitým centrem nejen sportovního, ale i kulturně-společenského dění v obci. O výstavbě sokolovny a vzniku prvních sportovních oddílů se podrobně píše v historické sokolské kronice, kterou založil bratr Josef Bárta, řídící učitel. Funkci starosty TJ Sokol Poruba vykonával od roku 1902 -1926 jeho bratr Adolf Bárta. Ten pronajal svou louku za sokolovnou k postavení hřiště pro první kolektivní sport - házenou. Třicátá léta 20.stol. jsou spojena s činností starosty Sokola  Františka Kozuba a místostarosty Františka Klose. V roce 1933  vystavělo Družstvo pro udržování sokolského domu (spojené s porubským továrníkem a aktivním Sokolem Ignácem Blažejem) u hostince i kuchyň, hostinský pokoj, nové záchody. Vzdělavatel bratr M.Dvořáček však kritizoval tehdejší výbor slovy: \enquote{...Mezi tělocvičnou, tj. cvičícím členstvem a výborem jednoty je velká mezera. Tělocvičně a jejímu nářadí se nevěnuje téměř žádná pozornost, peníze se věnují v prvé řadě hospodě na přestavbu a úpravu místností a tělocvična čeká. Chátrá, rezaví, hnije. Chybí zde skutečný sokolský duch, uvědomění, že jsme spolkem tělocvičným a výchovným a žádným jiným. Věřím, že jednou bude lépe, že se to obrátí k lepšímu, na cestu Tyršovu a Fügnerovu}.
-V roce 1934 slavila jednota Sokol Poruba 40. jubileum svého trvání. Slavnostní valné hromady se ve velkém sále sokolovny zúčastnilo 91 osob, kterou zahájil starosta František Kozub. Bylo vzpomenuto všech zemřelých bratří a sester včetně padlých bratří za světové války, podán stručný přehled z historie jednoty - za 40 let bylo uspořádáno 28 veřejných cvičení, 4 okrsková cvičení, sehráno 175 divadel a uskutečněno 25 přednášek. V projevech zakládajících členů Adolfa Bárty a Ignáce Blažeje byly vysvětleny důvody, které vedly porubské vlastence k založení sokolské jednoty. Poté byly předány nejen jim, ale i dalším dosud žijícím zasloužilým členům jednoty Josefu Bártovi, Františku Kozubovi a Františku Klosovi slavnostní plakety.
-
-\subsection{Doba \enquote{temna}}
-
-Zlatý věk Sokola mezi světovými válkami 1918 až 1938 ukončila 15. 3. 1939 okupace naší republiky německými vojsky. Činnost TJ Sokol Poruba byla zakázána, členstvo rozpuštěno a sokolovna včetně provozu restaurace na 6,5 let uzavřena. Pouze venkovní hřiště za sokolovnou využívali místní hoši k fotbalovým utkáním i mezi sousedními obcemi - Vřesinou, Klimkovicemi, Krásným Polem a Svinovem. Vzdělavatel jednoty, učitel Gustav Grohmann, byl uvězněn v německém zajetí. Protože porubští sokolové nechtěli přijít o sokolský majetek, založili v té době společnost s ručením omezeným s názvem \enquote{Družstvo sokolský dům}, která udržovala sokolovnu i uzavřenou restauraci. V květnu 1945 posloužila sokolovna osvoboditelům jako vojenský lazaret pro raněné vojáky.
-
-\subsection{První poválečná léta}
-
-Po osvobození Československa od německých okupantů v r. 1945 obnovil Sokol Poruba tělovýchovnou činnost. Jeho výbor tvořili: starosta Bohuš Bárta, jednatel Antonín Dragoun, vzdělavatel Gustav Grohmann, náčelnice Jiřina Dobešová, náčelník Miroslav Besta, hospodář Miroslav Strakoš, členové výboru František, Antonín a Jaromír Klosovi, Inocenc Osladil.Činnost obnovilo i Družstvo pro udržování Sokolského domu v Porubě pod vedením jednatele bratra Karla Klose, které organizuje sbírku na nejnutnější opravy sokolovny (fasáda, okna, střecha), která nebyla naštěstí válkou vážněji poškozena, jako např. Blažejova továrna na nábytek, porubský zámek, Bártův statek aj. S mírovým životem přišlo i obrovské nadšení členů pro činnost naší jednoty. V sokolovni bylo zahájeno pravidelné cvičení mládeže i dospělých. V r. 1946 bylo uspořádáno veřejné cvičení s průvodem obcí od kostela na vyzdobené hřiště u sokolovny, které bylo přeplněné cvičenci a obecenstvem ze širokého okolí.  Bylo zde připomenuto (kvůli válce o dva roky později) také 50. výročí trvání jednoty) a vznikla i památeční fotografie, na které je stěsnáno 140 osob od žactva až po dospělé členy, včetně těch zakládajících – bratrů Adolfa a Josefa Bárty, starosty Bohuše Bárty, Františka Kozuba, Františka Klosa, Adolfa Sokola, členové rodin Bartuskovy, Bestovy, Blažejovy, Buroňovy, Kláskovy, Kočí, Klosovy, Královy, Mikovy, Strakošovy a dalších. Jen na okraj  - na fotografii ve druhé přední řadě 4. zleva sedí 12 letý budoucí starosta Sokola Jiří Bárta, syn tehdejšího starosty Bohuše a vnuk dlouholetého starosty Adolfa Bárty. Ve 4. řadě zleva se nacházejí na 4. a 5. místě také moji prarodiče, Leopoldýna a Josef Bártovi. Veškerá tělocvičná činnost pak směřovala ke stěžejní akci Sokola – XI. Všesokolskému sletu v červenci 1948 konanému v Praze, kterého se účastnila početná skupina z Poruby.
-
-\subsection{Sjednocení všech tělovýchovných organizací}
-
-V únoru 1948 Ústřední akční výbor Národní fronty direktivně rozhodl, že jedinou tělovýchovnou organizací ve státě bude Sokol. Po XI. Všesokolském sletu v červenci 1948, který se stal příležitostí k vystoupení proti únorovému puči a účasti cca 50 tisíc Sokolů při pohřbu prezidenta dr. Edvarda Beneše, byly provedeny rozsáhlé personální čistky. Za protistátní spiknutí byli v 50 létech minulého století uvězněni členové jednoty Antonín Balnar (otec pozdějšího starosty TJ Sokol Poruby), Gustav Brohmann a Inocenc Osladil. Na počátku 50. let vznikla nová dobrovolná organizace Tatran Poruba a v r. 1953 rozhodl výbor TJ Sokol požádat DSO Tatran Poruba o začlenění do jejího svazku kvůli lepšímu finannímu zázemí, zejména pro výstavbu nového kluziště (s vysokými mantinely). V r. 1956 se pak fotbalový oddíl TJ Sokol včetně vedoucích funkcionářů Jaroslava Hrbáče a Viléma Panoše přemístil z Poruby – vsi na nově vystavěný stadion na sídlišti v Porubě a začal se používat pouze název Tatran Poruba. V sokolovně za malého zájmu členů pokračovalo jen cvičení základní tělesné výchovy, rekreačně se hrál volejbal a stolní tenis. Skončila činnost oddílu házené, kopané i ochotnic ká divadelní činnost, v r. 1960 skončil i hokejový oddíl DSO Tatran Poruba. V r. 1957  tělocvična v sokolovni dokonce dočasně sloužila JZD v Porubě jako sýpka na sklizené obilí.
-
-\subsection{Obnovení činnosti TJ Sokol Poruba}
-
-Teprve v r. 1963 Sokol Poruba obnovuje opět svoji činnost v obci. V sokolovně cvičí žákovské složky, muži i ženy. Svůj návrat hlásí také oddíl ledního hokeje, svépomocí bylo vystavěno za sokolovnou nové přírodní kluziště včetně venkovního osvětlení a šaten. V té době řídili činnost zejména Josef Langer, Leoš Klásek, Jiří Osladil a Miroslav Král. Od r. 1965 hokejové družstvo hrálo krajský přebor, v r. 1970 již dosáhlo nejvyšší mety – postup do divize (pod vedením Jiřího Osladila, ing. Jiřího Klose – předsedy TJ Sokol Poruba, Miloslavem Matějkou a ing. Antonínem Mikou). Se sedmdesátými léty 20. století je spojena generální přestavba sokolovny včetně restaurace a nadstavby malého sálu a rozsáhlá výstavba sportovních zařízení na pozemcích v okolí sokolovny. V r. 1973 byla zakoupena valašská chalupa se stodolou, zahradou, pastvinou a lesem v obci Zubří, která sloužila TJ Sokol k pořádání prázdninových táborů pro mládež od 10 do 15 let. Jejich realizací byli každoročně pověřováni manželé Leo a Jiřina Kláskovi, po týdnu je ve vedení tábora střídali ing. Jiří Klos s Miroslavem Bártou. Tyto tábory se uskutečňovaly v různých beskydských a valašských lokalitách.  V r. 1973 došlo také k založení oddílu házené, vyasfaltování plochy kluziště, vybudování antukových kurtů pro volejbal a tenis a v r. 1978 byla uvedena do provozu víceúčelová sportovní hala. Byla vybudována krytá tribuna u hřiště pro házenou a v osmdesátých letech dokončena sauna a cvičná louka v areálu sokolovny. Práce řídili a finančně zajišťovali členové výboru - předseda Ing. Jiří Klos, Ing. Antonín Mika, Ing. Leo Klásek, Emanuel Rataj, Ing. Zdeněk Kočí, Zdeněk Boháček, Jiří Bárta, Miroslav Bárta a Ivan Hadámek. Stavební práce financované z rozpočtu investičních akcí „Z" řídili předsedové obnoveného oddílu odbíjené Jiří Bárta a házené Miroslav Bárta. V té době se členská základna rozrostla zejména dětí a mládeže až do výše 300 členů. Po sloučení s TJ Hutní montáže Ostrava v r. 1979, jejíž název členové TJ Sokol Po...
-
-\subsection{Činnost v létech 1989 – 2014}
-
-Listopadové události roku 1989 nastartovaly společenské změny, které se dotkly zásadním způsobem také dění v TJ Hutní montáže Ostrava. Členové jeho výboru rozhodli o zpětném rozdělení oddílů a členstva na stav, v jakém existoval před sloučením v r. 1978.  „Staronovou Tělocvičnou jednotu Sokol Poruba" zastupovali ing. Leo Klásek, ing. Jiří Klos, ing. Jaroslav Kotek, ing. Antonín Mika a MUDr. Zdeněk Kříbek. Tito spolu s Jiřím Bártou vytvořili přípravný výbor pro založení TJ Sokol Poruba v rámci Župy Moravskoslezské České obce sokolské. Do této jednoty se již nevrátil oddíl ledního hokeje (nyní HC RT Torax Poruba), který působí na Zimním stadionu Sarezy v Ostravě-Porubě. V říjnu 1991 byl zvolen nový výbor Sokola Poruba, bohužel již bez účasti zesnulého Ing. Leoše Kláska, který se o její obnovení velkou měrou zasloužil. Starostou byl na valné hromadě zvolen bratr Jiří Bárta, místopředsedou ing. Jiří Klos, vzdělavatelkou sestra Jiřina Klásková a náčelnicí Mgr. Eva Buzková. V té době působily v jednotě oddíly házené (muži), odbíjené, malé kopané, tenisu, sokolské všestrannosti a turistiky.
-
-V r. 1994, ve kterém Sokol Poruba oslavil sté výročí svého založení, se ve sportovním areálu sokolovny pořádala velkolepý „Sletový den Moravskoslezské župy". Skladby XII. Všesokolského sletu předvedlo asi 2 tisícům diváků a hostů celkem 815 vybraných cvičenců župy včetně  našich žen vedených náčelnicí Mgr. Evou Buzkovou. Na venkovním hřišti byla vysazena nová jubilejní lípa. V krátké době se stala nejpočetnějším sportovním oddílem v jednotě házená. Od r. 1994 uspořádala jednota příměstský tábor pro školní děti, který vedla vzdělavatelka sestra Jiřina Klásková. Od té doby je každoročně tento tábor opakován (ve 3 až 4 turnusech) a je o něj  stále velký zájem. V r. 1995 vykazuje jednota již 255 členů. V r. 1997 byl založen oddíl hokejbalu pod vedením sestry Drahomíry Mackové, počet členů jednoty vzrostl na 304.
-
-V září roku 2000 předává Jiří Bárta (nar. 1934) funkci starosty Antonínu Balnarovi (nar.1947), když před tím dokončil v r. 1999 rekonstrukci čelní fasády na historické budově sokolovny. Jiří Bárta byl pokračovatelem rodinné sokolské tradice (jeho dědeček Adolf Bárta i otec Bohuš Bárta byli  rovněž volenými starosty jednoty, sám aktivně sportoval (košíková, volejbal a tenis), po r. 1991 usilovně bojoval o navrácení historického majetku (sokolovny, staveb vybudovaných v 70. a 80. letech min.století a přilehlého pozemku) zpět do majetku TJ Sokol Poruba, což bylo smluvně uskutečněno 30.6.2000 v hodnotě cca 45 miliónů korun .
-
-V roce 2001 působí v jednotě 5 oddílů (házená, volejbal, hokejbal, futsal, tenis) a odbor všestrannosti. Po téměř 40 létech prošlo hřiště házené generální opravou, byly vyměněny původní hokejové mantinely, byl položen nový asfaltový povrch, byla provedena rekonstrukce topení v tělocvičně i restauraci.  V květnu 2004 proběhly ve sportovním areálu jednoty oslavy 110. výročí jejího založení a vydána brožura zachycující stručně historii uplynulých 110 let, kterou zpracovali členové výboru ing. Jiří Klos, Jiřina Klásková a Antonín Balnar. Ve vedení jednoty dále pracovali Jiří Klásek, Vlastimil Palička, Vladimír Pánek, Marek Pěček, Anna Prokopová, Věra Bučková, Eliška Kramná, Drahomíra Macková, Bohumila Pyšová, , Jiří Bárta a MUDr. Zdeněk Kříbek. V r. 2005 obdržela jednota stavební povolení k výstavbě sportovní haly. Starosta bratr Antonín Balnar zahájil ihned kroky vedoucí k zajištění financování stavby (v plánované hodnotě cca 50 mil.Kč), když vlastní pozemek v areálu sokolovny byl již připraven (pozn. bohužel se jí nedočkal, když uprostřed obětavé práce pro jednotu umírá. Jeho památná věta: „ Každý nám sto slibů nese a my stále cvičíme v lese"). V r. 2007 po rozsáhlé generální opravě šaten a sociálního zařízení na tribuně byl celý objekt venkovního hřiště předán do užívání oddílu hokejbalu.  
-
-V té době se stává nejúspěšnějším oddílem jednoty házená, když mladší dorostenky skončily na závěrečném turnaji o přeborníka republiky druhé a starší dorostenky čtvrté. Hned rok poté, v r. 2008, se již starší dorostenky staly mistryněmi republiky a mladší skončily na třetím místě.  Byl to dosud největší úspěch, kterého jednota v dosavadní historii na sportovním poli dosáhla. Za tímto úspěchem stále především trenéři Aleš Chrastina a Roman Tichý. V r. 2009 pak starší dorostenky titul mistryň republiky obhájily. Úspěchy oddílu házené přivádí do jednoty ing. Libora Adámka, který sponzoruje družstvo žen, jež posíleno o nové hráčky postoupilo až do házenkářské interligy (společná československá soutěž v házené žen) a od roku 2010 (se souhlasem výboru jednoty) vystupuje pod názvem DHC Sokol Poruba. 
-
-Oddíl házené sdružuje družstva minižaček, žaček, dorostenek a žen v celkovém počtu 81 členek, oddíl hokejbalu s žáky, juniory a muži má 65 členů, florbal má 60 mladších a starších žáků. Volejbal s družstvy žaček, dorostenek a žen 44 členek, futsal 17 mužů, dva oddíly sokolské všestrannosti 88 mužů, 45 žen a dětí, tenisový oddíl 43 tenistů a tenistek.
-
-Celé období od nástupu Antonína Balnara do funkce starosty TJ Sokol Poruba je charakterizováno úsilím vedoucím k zajišťování finančních prostředků na technické zhodnocování sportovišť a jednáním směřujcím k vybudování nové sportovní haly pro kolektivní hry, které ve sportovní činnosti jednoty převládají, bohužel do r. 2014 se ani  „nekoplo". Se starostou Antonínem Balnarem se na zabezpečení chodu jednoty v minulých létech nejvíce podíleli Drahomíra Macková, Šárka Budíková, Bohumila Pyšová, Jiří Klásek a ing. Jiří Klos. Ve sportovních oddílech velmi dobře pracovali Miroslav Bárta (házená), Kateřina Grabovská a Monika Struminská (volejbal), Tomáš Macko (hokejbal), Mgr. Sylva Roháčková (STYX), Vítězslav Smuž a Tomáš Maceček (box), Ludmila Bestová a ing. Monika Horečková (všestrannost), ing. Boris Blažej a Dominik Králík. Ale i další desítky jejich spolupracovníků naplňovali v praxi sokolské heslo „Ni zisk, ni slávu!"
-
-Ing. Jiří Klos publikaci „Historie Tělocvičné jednoty Sokol Poruba 1894 – 2014" zakončuje slovy: „Chceme i v budoucnu v duchu našich předchůdců usilovat o utužování tělesného zdraví občanů a vytváření správných charakterových a morálně volních vlastností u členů tak, jak to vyjadřují Stanovy České obce sokolské. Sto dvacet let jednoty představuje kus historie, kterou vytvářeli obětaví funkcionáři, trenéři a cvičitelé spolu s výbornými sportovci. Bohaté dědictví z minulosti nás zavazuje, abychom je rozvíjeli nejenom pro blaho svých členů, ale pro blaho všech občanů obce a zejména mládeže. Tělocvičné jednotě Sokol Poruba přejeme, aby ve své činnosti neochabovala a dále kráčela mužně a neochvějně vpřed za svým cílem povznést tělesně a duševní síly našeho občana.
-\clearpage
-\restoregeometry
-
-\newgeometry{margin=0.5in}
-\subsection{Členský sokolský průkaz Lumíra Bárty (1929)}
-
-\foreach \x in {1,...,4} {
-
-	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/clensky_prukaz/\x.jpg}
-
-}
-
-
-\clearpage
-\restoregeometry
-
-\newgeometry{margin=0.5in}
-\section{Historie hokejbalového klubu}
-\restoregeometry
-
-\foreach \x in {1,...,6} {
-
-	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/hokejbal/hokejbal_\x.jpg}
-
-}
-
-\clearpage
-\newgeometry{margin=1in}
-\section{Z kroniky oddílu házené TJ Sokol Poruba}
-
-
-Teprve nedávno se kromě historické sokolské kroniky, založené Josefem Bártou, překvapivě objevila další kronika, a to oddílu házené Sokol Poruba, který byl založen v r.1973. Obětaví činovníci pak do ní vkládali plných 13 let zápisy o činnosti prvních družstev, o jejich prvních soutěžích a úspěších v nich, podložené podrobnými výsledky utkání, jmény hráčů i trenérů, fotkami i novinovými články. Díky tajemnici výboru TJ Sokol Poruba a zároveň házenkářské trenérce i webmasterce webů (sokolporuba.cz, hazenaporuba.cz a hazenasokolporuba.cz) Petře Vavříkové - Bártové si tuto kroniku mohli prohlédnout zájemci, kteří se zúčastnili oslavy 50.výročí založení oddílu házené Sokol Poruba 3.9.2023 v hale Sareza. Více o této oslavě lze nalézt na zmíněných webovských stránkách.
-Jelikož v předchozí kapitole Vznik a historický přehled rozvoje TJ Sokol Poruba, v části 4.6. a 4.7., se uvádí o založení a činnosti oddílu mezinárodní házené v letech 1973 - 1989 pouze několik málo informací, díky nalezené oddílové kronice bylo možné vložit také do historické sokolské kroniky alespoň jména těch členů (činovníků, trenérů a hráčů), kteří se v prvních letech činnosti oddílu házené zasloužili o šíření dobrého jména porubského Sokola. Protože někteří z nich již nejsou mezi námi, jejich památku si můžeme připomenout vykonanou prací a úspěchy, kterých dosáhli.
-
-\subsection{Ze zápisu prvního kronikáře z r. 1973}
-\enquote{Zakládající členové oddílu:
-Bárta Miroslav - trenér Juchelka Albín - předseda. Hendrych Josef - jednatel,organ.pracovník
-Oddíl házené má 29 členů. Prvními hráči mladších a starších žáků byli: Bialek Petr, Barce Jiří, Buchta Eduard, Bajgar Pavel, Dohnal Antonín, Doležel Petr, Dominik Miroslav, Škandera Rudolf, Klajča Juo, Kudela Miloš, Michalus Pavel, Miklušák Petr, Solanský Pavel, Šebestík Libor, Žák Jindřich, Korejs Vojtěch, Šindler Jiří, Veselý Radim, Sirý Miroslav, Sirý Jan, Figell Š., Cihelka Jaromír, Tymoč Jiří, Zámečník Aleš, Zapletal Vrat., Racek Jindřich, Klásek Jiří, Krátký Vlad. Trenérem družstev mladších i starších žáků byl v r. 1973 br.Bárta Miroslav, trenér III. tř. Pomocným trenérem byl br.Hendrych Josef...
-...Už 2. května docílili žáci A družstva úspěšného výsledku, v Polance hráli 8:8. V měsíci dubnu a květnu 1973 odpracovali žáci obou družstev brigádnicky na hřišti u sokolovny 106 hodin. Trénink hráčů se konal na asfaltovém hřišti. Do konce června 1973 sehráli žáci A+B 26 zápasů se střídavými výsledky. 2.července nastoupilo 16 žáků na letní tábor pořádaný Sokolem Poruba...Během roku odpracovali hráči a členové výboru oddílu házené 600 hodin na úpravě hřiště a okolí, vč.stavby umělého osvětlení nad hřištěm házené TJ Sokol Poruba. Velkým úspěchem a dobrým příslibem bylo, že družstvo žáků A skončilo v soutěži o okresního přeborníka na 2. místě. Prvními hráčkami házené byly Holáňová, Plonková, Korabečná, Bojdová, Bobríková, Kunderová, Vařeková, Chrenková, Bodoloszová, Kučerová.... Od r.1974 byl trenérem družstva žákyň Kučera Antonín. Tréninky družstev žáků byly zahájeny 8.ledna 1974 v tělocvičně ZDŠ Thälmannova a ZDŠ Komenského.}
-Ze zápisu v r.1974 -75:
-\enquote{...Velkého úspěchu docílili žáci, když získali pro oddíl první přebornický titul okresu. .. V oddíle házené byl zvolen nový výbor v čele s předsedou br.Bártou Miroslavem. Trenérku družstva mladších žáků vykonává s. Koníčková Jana...
-Po podzimním kole krajského přeboru, skup.B, se naše žákyně umístily bez porážky na 1.místě. Dorostenci, kteří začali hrát ve své kategorii od podzimu 1974 se umístili v krajském přeboru na 3.místě. Nejlepší střelkyní se stala Š.Holáňová před J.Koukalovou. V lednu 1975 začíná trénovat družstvo mladších žákyň s.Bártová Dana. Žákyně Sokol Poruba se staly pod vedením trenéra br.Antonína Kučery přebornicemi Sm kraje a postoupily do finále přeboru ČSR (na čestném 5.místě). Hráčka Sokol Poruba Liba Mikulenková byla vybrána do reprezentačního družstva žákyň ČSR. Trenérem dorostenek se stal br.Štefan Husárik...Letním táborem skončilo sezóna 1974 -75, který přinesl velký rozmach a úspěch házené v TJ Sokol Poruba... Na podzim 1975 zahájily ženy soutěž v krajském přeboru házené v sestavě: Janečková Eva, Bártová Iva, Bártová Dana, Hradská Leona, Švástová Vlad., Mužná Anna, Fromeliusová, Sokolovská Irena, Hrušková Marie. Trenéry družstva jsou Nováček Emil, Rejlič Miograd.
-V sezóně 1975 - 76 trénovali 7 družstev: Nováček Emil, Bárta Miroslav, Koníčková Jana, Bártová Dana, Kučera Antonín, Husárik Štefan, Sedlářová Jitka... Do reprezentačního družstva dorostenek Sm.kraje byly vybrány z družstva dorostenek Sokol Poruba tyto hráčky: Kašná, Mikulenková, Teichmanová, Holáňová a Sedlářová. ...Pod vedením br.Miroslava Bárty vybojovali dorostenci postup do Krajského přeboru Sm.kraje O postup se zasloužili hráči Šigut-brankář, Dohnal, Kubánek, Vidlák, Milej, Šebestík, Tribalík, Žák, Kostřica, Kudela, Madleřák...Oddíl házené odpracoval celkem 628 hodin, převážně na stavbě nové haly a úpravě areálu za sokolovnou. Největší podíl na odpracovaných hodinách má Bárta Miroslav...}
-
-Výsledky sezóny 1976-77 podzim: krajském přeboru žákyně A - 3.místo, dorostenky - 1.místo, ženy - 3. místo, dorostenci - 3. místo.
-Po 5 letém trvání oddílu se probojovalo družstvo dorostenek v r.1978 do nejvyšší soutěže (ligy). Odznaky Přeborník Sm kraje dorostenky obdržely u příležitosti otevření nové haly TJ Sokol Poruba...Bylo založeno nové družstvo mužů pod trenérem Miroslavem Bártou, který vedl v krajském přeboru i družstvo dorostenců. 19.3.1978 vybojovaly dorostenky ve finále Českého poháru 3.místo, když porazily Slezan Fr - Místek a Baník Most. Prohrály se Slávií Praha a Zorou Olomouc...
-
-Dnem 1.12.1978 došlo v našem oddíle k významné události. Po dohodě s TJ Vítkovice přešlo její družstvo mužů do naší TJ, která se přejmenovala na Hutní montáže Poruba a bude hrát v krajském přeboru I.tř... V r.1979 pokračuje výstavba házenkářského areálu (nová tribuna, věž s rozhlasem a světelným ukazatelem skóre)...Dne 31.12.2980 došlo opět k výměně kronikáře Tvarůžka a k Peru se opět dostal Jaroslav Luger...Na výroční členské schůzi oddílu házené, konané 16.1.1981 za nečekané účasti téměř 100\% členů, byl zvolen nový výbor ve složení: předseda Miroslav Bárta, hospodář Jaroslav Luger, pokladník Šárka Holáňová...V sezóně 1980-81 příjemně překvapily mladší žákyně, když pod trenérem Antonínem Kučerou nenašly přemožitele a vyhrály svou soutěž. Ve finále o přeborníka Sm kraje družstvo vybojovalo 2.místo. Rovněž ženy pod trenérem Petrem Koutným si vítězstvím krajských přeborů Sm kraje a Jm kraje nečekaně vybojovaly postup do národní ligy. Bohužel v podzimní části se jim nedařilo a rozdílem jediného bodu sestoupily zpět do krajského přeboru... V soutěžním ročníku 1981-82 přibyla do výboru Ivanka Bártová. Družstva mladších i starších žáků trénoval Kožaný Václav, dorostence vedl Ing.Mizera Jiří, muže Trnavský František, mladší žákyně trénovali Fiala Jiří a Roháč, starší žákyně Antonín Kučera, dorostenky Antonín Dohnal a ženy Petr Koutný...V květnu 1983 se dorostenky zúčastnily několika mezinárodních turnajů (v Drážďanech 1.místo, Haloren Halle NDR)...V r.1984 družstvo dorostenek pod trenérem Drahošem postoupilo do 1. dorostenecké ligy. Na podzim r.1984 se družstvo mladších dorostenců v krajském přeboru umístilo na 2.místě, starší dorostenci na 1.místě (získalo 16 bodů, skóre 234:139), mužstvo mužů se umístilo na 3.místě... Ze zprávy o činnosti oddílu házené TJ Hutní montáže Ostrava: \enquote{Dnes je náš oddíl házené největším oddílem v Ostravě, v pravidelných soutěžích startuje 12 družstev...a jméno TJ HM Ostrava se dostává stále častěji do podvědomí sportovní veřejnosti...}
-
-Poslední zápis v kronice je z r.1986, který popisuje podrobné výsledky soutěží všech družstev oddílu házené.
-
-\clearpage
-\restoregeometry
-
-\newgeometry{margin=0.5in}
-\foreach \x in {1,...,9} {
-
-	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/hazena/\x.jpg}
-
-}
-
-\clearpage
-\restoregeometry
-
-\newgeometry{margin=1in}
-\section{Sokolský den}
-\restoregeometry
-
-\newgeometry{margin=0.5in}
-\foreach \x in {1,...,2} {
-
-	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/sokolsky_den/sokolsky_den_\x.jpeg}
-
-}
-
-\clearpage
-\restoregeometry
-
-\newgeometry{margin=0.5in}
-\section{Výběr z oddílů}
-
-\foreach \x in {1,...,7} {
-
-	\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/dokonceni/\x.jpg}
-
-	
-
-}
-
+% Content will be added here
 
 \end{document}
