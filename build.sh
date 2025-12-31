@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="1_2_0"
+version="2_0_0"
 
 # Build old chronicle (Předválečná kronika)
 echo "Building Předválečná kronika..."
