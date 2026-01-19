@@ -20,6 +20,7 @@
 \usepackage{tocloft}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
+\usepackage{pdfpages}
 
 % Box for newspaper clippings
 \newtcolorbox{novinovy-vystrizek}{
@@ -95,7 +96,7 @@
 \thispagestyle{empty}
 \begin{center}
 \vspace*{2cm}
-{\Huge\bfseries\color{sokolred} Nová kronika}\\[1cm]
+{\Huge\bfseries\color{sokolred} Současná kronika}\\[1cm]
 {\Large\bfseries TJ Sokol Poruba}\\[2cm]
 \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/cover.jpg}\\[2cm]
 {\large Digitální vydání}\\[0.5cm]
@@ -118,11 +119,8 @@
 \addcontentsline{toc}{section}{Úvodní slovo kronikáře TJ Sokol Poruba}
 \markright{Úvodní slovo kronikáře TJ Sokol Poruba}
 
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/1.jpeg}
+\includepdf[pages=1-3,pagecommand={}]{scans/nova_kronika_scans.pdf}
 
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/2.jpeg}
-
-\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/uvodni_slovo/3.jpeg}
 
 
 \section*{Slovo autora sazby digitální kroniky}
@@ -145,6 +143,37 @@ Vít Chrubasík
 \clearpage
 \restoregeometry
 
-% Content will be added here
+\input{nova_kronika_historicky_prehled_klos.tex}
+
+\clearpage
+
+\section*{Výběr z rodinné kroniky Bártů}
+\phantomsection
+\addcontentsline{toc}{section}{Výběr z rodinné kroniky Bártů}
+\markright{Výběr z rodinné kroniky Bártů}
+
+
+
+
+
+
+\includepdf[pages=4-10,pagecommand={}]{scans/nova_kronika_scans.pdf}
+
+\section*{Současná kronika}
+\phantomsection
+\addcontentsline{toc}{section}{Současná kronika}
+\markright{Současná kronika}
+
+
+\includepdf[pages=11-36,pagecommand={}]{scans/nova_kronika_scans.pdf}
+
+
+\foreach \imgfile in {105914,110010,110058,110152}{
+  \begin{figure}[p]
+    \centering
+    \adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{scans/2025_05/IMG_20250321_\imgfile.jpg}
+  \end{figure}
+  \clearpage
+}
 
 \end{document}
