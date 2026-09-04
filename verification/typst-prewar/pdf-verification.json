@@ -1,0 +1,24 @@
+{
+  "pdf": "predvalecna.pdf",
+  "bytes": 13052348,
+  "pages": 108,
+  "outlineEntries": 201,
+  "topLevelBookmarks": 48,
+  "linkAnnotations": 204,
+  "firstBookmark": "Obsah",
+  "lastBookmark": "Pořad slavnostní valné hromady",
+  "firstOutlineDifference": null,
+  "checks": {
+    "qpdfClean": true,
+    "typstVersion": true,
+    "documentMetadata": true,
+    "tagged": true,
+    "a4Pages": true,
+    "czechLanguage": true,
+    "outlineOrder": true,
+    "contentsLinks": true,
+    "externalLink": true,
+    "finalPage": true
+  },
+  "allPassed": true
+}

@@ -1,0 +1,189 @@
+{
+  "baselineSourceSha256": "18aac778067521d3f50151443fb290589b20fb67732980d8ffe96fe3473bd85d",
+  "baselineEntryPointSha256": "5f3a140cc3f77ad44f3493ffd6e18e06b551a641f181307586a4b7cca8cf0d2a",
+  "baselineSourceMatchesManifest": true,
+  "frontMatter": {
+    "titlePage": {
+      "values": [
+        "Předválečná kronika",
+        "TJ Sokol Poruba",
+        "Digitální vydání"
+      ],
+      "match": true
+    },
+    "headings": {
+      "count": 5,
+      "match": true
+    },
+    "media": {
+      "references": [
+        "images/cover.jpg",
+        "images/uvodni_slovo/1.jpeg",
+        "images/uvodni_slovo/2.jpeg",
+        "images/uvodni_slovo/3.jpeg",
+        "images/stara_kronika_transcript_fotky/1a.png",
+        "images/stara_kronika_transcript_fotky/1b.png",
+        "images/stara_kronika_transcript_fotky/1c.png"
+      ],
+      "match": true
+    },
+    "links": {
+      "targets": [
+        "https://github.com/vichr-vita/sokolska-kronika"
+      ],
+      "match": true
+    },
+    "normalizedText": {
+      "sourceSha256": "919116810d0e0843446d5ba91bbefa87d77dc952b1a5c3b78b836432bc947798",
+      "typstSha256": "919116810d0e0843446d5ba91bbefa87d77dc952b1a5c3b78b836432bc947798",
+      "match": true
+    }
+  },
+  "periods": [
+    {
+      "period": "1894-1900",
+      "sourceLines": "92-396",
+      "headings": {
+        "count": 12,
+        "match": true
+      },
+      "media": {
+        "references": [],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "42363e8c8cd53d35736b97e0e8cfb59766f7ec9d7000073fd8d8c51d9dd1be21",
+        "typstSha256": "42363e8c8cd53d35736b97e0e8cfb59766f7ec9d7000073fd8d8c51d9dd1be21",
+        "match": true
+      }
+    },
+    {
+      "period": "1901-1905",
+      "sourceLines": "402-869",
+      "headings": {
+        "count": 24,
+        "match": true
+      },
+      "media": {
+        "references": [],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "24b7485becac7714d34a3a58cfe24d55ddca327c0a44e802e8613ea4b534b329",
+        "typstSha256": "24b7485becac7714d34a3a58cfe24d55ddca327c0a44e802e8613ea4b534b329",
+        "match": true
+      }
+    },
+    {
+      "period": "1906-1910",
+      "sourceLines": "875-1284",
+      "headings": {
+        "count": 24,
+        "match": true
+      },
+      "media": {
+        "references": [],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "38cfe30d78876322fee2c9a49974b9286bcac379f8a222da0e506d076adf2b87",
+        "typstSha256": "38cfe30d78876322fee2c9a49974b9286bcac379f8a222da0e506d076adf2b87",
+        "match": true
+      }
+    },
+    {
+      "period": "1911-1915",
+      "sourceLines": "1290-1673",
+      "headings": {
+        "count": 23,
+        "match": true
+      },
+      "media": {
+        "references": [],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "bd98f2032c28804f6ecc768580a7fe2d73192276e52272835577cb8ca6b77800",
+        "typstSha256": "bd98f2032c28804f6ecc768580a7fe2d73192276e52272835577cb8ca6b77800",
+        "match": true
+      }
+    },
+    {
+      "period": "1916-1920",
+      "sourceLines": "1679-2137",
+      "headings": {
+        "count": 27,
+        "match": true
+      },
+      "media": {
+        "references": [],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "18668b91c46e669384aecdff853a30abf30ad553c29dd3e9beb52dfa92d89b76",
+        "typstSha256": "18668b91c46e669384aecdff853a30abf30ad553c29dd3e9beb52dfa92d89b76",
+        "match": true
+      }
+    },
+    {
+      "period": "1921-1925",
+      "sourceLines": "2143-2697",
+      "headings": {
+        "count": 28,
+        "match": true
+      },
+      "media": {
+        "references": [],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "1a37a9ba6899dc1459397ce7bebbd041f116729bfdab73d560b115f744bdb1b8",
+        "typstSha256": "1a37a9ba6899dc1459397ce7bebbd041f116729bfdab73d560b115f744bdb1b8",
+        "match": true
+      }
+    },
+    {
+      "period": "1926-1930",
+      "sourceLines": "2703-3398",
+      "headings": {
+        "count": 32,
+        "match": true
+      },
+      "media": {
+        "references": [
+          "images/stara_kronika_transcript_fotky/2.png"
+        ],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "f51199a24214bb7c31eebd7f4f3ee52e90bc4bb43e79a7e54f817358a64616d5",
+        "typstSha256": "f51199a24214bb7c31eebd7f4f3ee52e90bc4bb43e79a7e54f817358a64616d5",
+        "match": true
+      }
+    },
+    {
+      "period": "1931-1934",
+      "sourceLines": "3404-3877",
+      "headings": {
+        "count": 25,
+        "match": true
+      },
+      "media": {
+        "references": [
+          "images/stara_kronika_transcript_fotky/3.png",
+          "images/stara_kronika_transcript_fotky/4.png",
+          "images/stara_kronika_transcript_fotky/5.png",
+          "images/stara_kronika_transcript_fotky/6.png",
+          "images/stara_kronika_transcript_fotky/7.png"
+        ],
+        "match": true
+      },
+      "normalizedText": {
+        "sourceSha256": "02d3d4130c1f982d166a95d63bde0064858e779c238a92d832a0496baa6b9c2d",
+        "typstSha256": "02d3d4130c1f982d166a95d63bde0064858e779c238a92d832a0496baa6b9c2d",
+        "match": true
+      }
+    }
+  ],
+  "allPassed": true
+}
