@@ -1,0 +1,110 @@
+{
+  "baselineSourceSha256": "18aac778067521d3f50151443fb290589b20fb67732980d8ffe96fe3473bd85d",
+  "stableInventoryRecords": 705,
+  "stableInventoryMismatches": [],
+  "generatedMarkupMatches": {
+    "1894-1900.typ": true,
+    "1901-1905.typ": true,
+    "1906-1910.typ": true,
+    "1911-1915.typ": true,
+    "1916-1920.typ": true,
+    "1921-1925.typ": true,
+    "1926-1930.typ": true,
+    "1931-1934.typ": true
+  },
+  "sourceEnvironmentCounts": {
+    "description": 41,
+    "enumerate": 24,
+    "itemize": 70,
+    "tabular": 3,
+    "novinovy-vystrizek": 7,
+    "quote": 2,
+    "verse": 4
+  },
+  "sourceEnvironmentNesting": [
+    {
+      "type": "verse",
+      "nesting": "novinovy-vystrizek>verse"
+    },
+    {
+      "type": "verse",
+      "nesting": "quote>verse"
+    }
+  ],
+  "tableDimensions": [
+    {
+      "rows": 6,
+      "columns": 2
+    },
+    {
+      "rows": 6,
+      "columns": 3
+    },
+    {
+      "rows": 10,
+      "columns": 4
+    }
+  ],
+  "listItemCounts": {
+    "latex": {
+      "description": 402,
+      "enumerate": 125,
+      "itemize": 319
+    },
+    "typst": {
+      "itemize": 319,
+      "enumerate": 125,
+      "description": 402
+    }
+  },
+  "intentionalLineBreaksOutsideTables": {
+    "latexPlain": 106,
+    "latexWithSpacing": 4,
+    "typstPlain": 106
+  },
+  "verseLineCounts": {
+    "latex": [
+      18,
+      11,
+      4,
+      12
+    ],
+    "typst": [
+      18,
+      11,
+      4,
+      12
+    ]
+  },
+  "symbolCounts": {
+    "latex": {
+      "✓": 2,
+      "½": 6,
+      "¼": 1,
+      "†": 2,
+      "¾": 1,
+      "…": 1
+    },
+    "typst": {
+      "✓": 2,
+      "½": 6,
+      "¼": 1,
+      "†": 2,
+      "¾": 1,
+      "…": 1
+    }
+  },
+  "checks": {
+    "frozenSource": true,
+    "stableStructuredInventory": true,
+    "fullGeneratedMarkup": true,
+    "normalizedContent": true,
+    "structuredBlockOrder": true,
+    "structuredBlockCounts": true,
+    "listItems": true,
+    "intentionalLineBreaks": true,
+    "verseLineation": true,
+    "symbols": true
+  },
+  "allPassed": true
+}

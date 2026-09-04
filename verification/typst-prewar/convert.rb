@@ -221,9 +221,10 @@ def convert(lines)
 end
 
 source_lines = File.readlines(SOURCE, chomp: true, encoding: "UTF-8")
-FileUtils.mkdir_p(CONTENT)
+output_dir = File.expand_path(ARGV.fetch(0, CONTENT))
+FileUtils.mkdir_p(output_dir)
 
 PERIODS.each do |filename, line_range|
   selected = source_lines[(line_range.begin - 1)..(line_range.end - 1)]
-  File.write(File.join(CONTENT, filename), convert(selected))
+  File.write(File.join(output_dir, filename), convert(selected))
 end

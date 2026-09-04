@@ -2,6 +2,10 @@
   "baselineSourceSha256": "18aac778067521d3f50151443fb290589b20fb67732980d8ffe96fe3473bd85d",
   "baselineEntryPointSha256": "5f3a140cc3f77ad44f3493ffd6e18e06b551a641f181307586a4b7cca8cf0d2a",
   "baselineSourceMatchesManifest": true,
+  "stableSectionInventory": {
+    "count": 200,
+    "match": true
+  },
   "frontMatter": {
     "titlePage": {
       "values": [
@@ -33,11 +37,20 @@
       ],
       "match": true
     },
+    "emphasis": {
+      "count": 9,
+      "match": true
+    },
     "normalizedText": {
       "sourceSha256": "919116810d0e0843446d5ba91bbefa87d77dc952b1a5c3b78b836432bc947798",
       "typstSha256": "919116810d0e0843446d5ba91bbefa87d77dc952b1a5c3b78b836432bc947798",
       "match": true
     }
+  },
+  "frontMatterIntentionalLineBreaks": {
+    "source": 14,
+    "typst": 14,
+    "match": true
   },
   "periods": [
     {

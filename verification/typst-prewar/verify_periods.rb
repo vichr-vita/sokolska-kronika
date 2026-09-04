@@ -9,6 +9,7 @@ LATEX = File.join(ROOT, "stara_kronika.tex")
 LATEX_MAIN = File.join(ROOT, "stara_kronika_main.tex")
 CONTENT = File.join(ROOT, "chronicles/predvalecna/content")
 MANIFEST = File.join(ROOT, "verification/latex-baseline/manifest.json")
+SECTIONS = File.join(ROOT, "verification/latex-baseline/predvalecna-sections.txt")
 REPORT = File.join(__dir__, "period-comparison.json")
 
 PERIODS = {
@@ -148,6 +149,38 @@ def typst_headings(lines)
   end
 end
 
+def latex_emphasis(lines)
+  lines.flat_map do |line|
+    line.scan(/\\(textbf|emph|textit)\{([^{}]*)\}/).map do |command, text|
+      { "style" => command == "textbf" ? "strong" : "emphasis", "text" => latex_inline(text) }
+    end
+  end
+end
+
+def typst_emphasis(lines)
+  pattern = /\*([^*]+)\*|(?<![[:alnum:]\/])_([^_]+)_(?![[:alnum:]])|#text\(style: "italic"\)\[#raw\("([^"]*)"\)\]|#text\(style: "italic"\)\[me#sym\.at#h\(0pt\)vichr\.me\]/
+  lines.flat_map do |line|
+    line.to_enum(:scan, pattern).map do
+      match = Regexp.last_match
+      if match[1]
+        { "style" => "strong", "text" => normalize(match[1]) }
+      else
+        text = match[2] || match[3] || "me@vichr.me"
+        { "style" => "emphasis", "text" => normalize(text) }
+      end
+    end
+  end
+end
+
+def baseline_headings(path)
+  File.readlines(path, chomp: true, encoding: "UTF-8").filter_map do |line|
+    match = line.match(/\A\\contentsline \{(section|subsection)\}\{(.*)\}\{\d+\}\{section\*\.\d+\}%\z/)
+    next unless match
+
+    { "level" => match[1] == "section" ? 1 : 2, "text" => normalize(latex_inline(match[2])) }
+  end
+end
+
 manifest = JSON.parse(File.read(MANIFEST, encoding: "UTF-8"))
 expected_source_hash = manifest.dig("predvalecna", "sourceSha256", "stara_kronika.tex")
 actual_source_hash = Digest::SHA256.file(LATEX).hexdigest
@@ -172,6 +205,8 @@ front_source_links = front_source_lines.filter_map { |line| line[/\\href\{([^}]+
 front_typst_links = front_body_lines.filter_map { |line| line[/#link\("([^"]+)"\)/, 1] }
 front_source_headings = latex_headings(front_source_lines)
 front_typst_headings = typst_headings(front_body_lines)
+front_source_emphasis = latex_emphasis(front_source_lines)
+front_typst_emphasis = typst_emphasis(front_body_lines)
 front_source_title = [
   main_lines[97][/sokolred\}\s*([^}]*)/, 1],
   main_lines[98][/bfseries\s+([^}]*)/, 1],
@@ -183,6 +218,10 @@ front_result = {
   "headings" => { "count" => front_source_headings.length, "match" => front_source_headings == front_typst_headings },
   "media" => { "references" => front_source_media, "match" => front_source_media == front_typst_media },
   "links" => { "targets" => front_source_links, "match" => front_source_links == front_typst_links },
+  "emphasis" => {
+    "count" => front_source_emphasis.length,
+    "match" => front_source_emphasis == front_typst_emphasis,
+  },
   "normalizedText" => {
     "sourceSha256" => Digest::SHA256.hexdigest(front_source_text),
     "typstSha256" => Digest::SHA256.hexdigest(front_typst_text),
@@ -260,13 +299,31 @@ results = PERIODS.map do |name, line_range|
   result
 end
 
+all_typst_headings = typst_headings(front_body_lines) + PERIODS.keys.flat_map do |name|
+  typst_headings(File.readlines(File.join(CONTENT, "#{name}.typ"), chomp: true, encoding: "UTF-8"))
+end
+stable_headings = baseline_headings(SECTIONS)
+front_source_line_breaks = front_source_lines.count { |line| line.match?(/\\\\(?:\[[^\]]*\])?\s*$/) }
+front_typst_line_breaks = front_body_lines.count { |line| line.match?(/\\\s*$/) }
+
 report = {
   "baselineSourceSha256" => actual_source_hash,
   "baselineEntryPointSha256" => actual_main_hash,
   "baselineSourceMatchesManifest" => true,
+  "stableSectionInventory" => {
+    "count" => stable_headings.length,
+    "match" => stable_headings == all_typst_headings,
+  },
   "frontMatter" => front_result,
+  "frontMatterIntentionalLineBreaks" => {
+    "source" => front_source_line_breaks,
+    "typst" => front_typst_line_breaks,
+    "match" => front_source_line_breaks == front_typst_line_breaks,
+  },
   "periods" => results,
-  "allPassed" => front_result.values.all? { |check| check["match"] } && results.all? do |result|
+  "allPassed" => stable_headings == all_typst_headings &&
+    front_result.values.all? { |check| check["match"] } &&
+    front_source_line_breaks == front_typst_line_breaks && results.all? do |result|
     result["headings"]["match"] && result["media"]["match"] && result["normalizedText"]["match"]
   end,
 }

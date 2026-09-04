@@ -1,5 +1,5 @@
 {
-  "pdf": "soucasna.pdf",
+  "pdf": "soucasna_kronika_v2_0_0.pdf",
   "bytes": 86670661,
   "pages": 49,
   "outlineEntries": 13,
@@ -30,6 +30,8 @@
     "frontMatterText": true,
     "historicalOverviewText": true,
     "headingHierarchy": true,
+    "stableSectionInventory": true,
+    "stableStructuredInventory": true,
     "emphasis": true,
     "externalLinks": true,
     "intentionalLineBreak": true,

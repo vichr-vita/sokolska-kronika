@@ -10,6 +10,8 @@ MAIN_TEX = File.join(ROOT, "nova_kronika_main.tex")
 OVERVIEW_TEX = File.join(ROOT, "nova_kronika_historicky_prehled_klos.tex")
 CONTENT = File.join(ROOT, "chronicles/soucasna/content")
 MANIFEST = File.join(ROOT, "verification/latex-baseline/manifest.json")
+SECTIONS = File.join(ROOT, "verification/latex-baseline/soucasna-sections.txt")
+STRUCTURED = File.join(ROOT, "verification/latex-baseline/soucasna-structured-blocks.txt")
 REPORT = File.join(__dir__, "verification.json")
 PDF = File.expand_path(ARGV.fetch(0, "/tmp/opencode/soucasna.pdf"))
 
@@ -28,7 +30,7 @@ def latex_inline(text)
   value.gsub!(/\\href\{([^{}]+)\}\{([^{}]+)\}/, "\\2")
   loop do
     before = value.dup
-    value.gsub!(/\\enquote\{([^{}]*)\}/, '„\1“')
+    value.gsub!(/\\enquote\s*\{([^{}]*)\}/, '„\1“')
     value.gsub!(/\\emph\{([^{}]*)\}/, "\\1")
     break if value == before
   end
@@ -65,6 +67,24 @@ def typst_headings(lines)
     elsif (match = line.match(/^\s*heading\(level:\s*([12])\)\[(.*)\]/))
       { "level" => match[1].to_i, "title" => typst_inline(match[2]) }
     end
+  end
+end
+
+def baseline_headings(path)
+  File.readlines(path, chomp: true, encoding: "UTF-8").filter_map do |line|
+    match = line.match(/\A\\contentsline \{(section|subsection)\}\{(.*)\}\{\d+\}\{section\*\.\d+\}%\z/)
+    next unless match
+
+    { "level" => match[1] == "section" ? 1 : 2, "title" => latex_inline(match[2]) }
+  end
+end
+
+def stable_inventory_matches(path, sources)
+  File.readlines(path, chomp: true, encoding: "UTF-8").all? do |record|
+    match = record.match(/\A([^:]+):(\d+):(.*)\z/)
+    next true unless match
+
+    sources.fetch(match[1]).fetch(match[2].to_i - 1) == match[3]
   end
 end
 
@@ -115,6 +135,10 @@ overview_source = prose(overview_lines, method(:latex_inline))
 overview_typst = prose(historical_lines, method(:typst_inline))
 expected_headings = source_headings(main_lines, overview_lines)
 actual_headings = typst_headings(front_lines + historical_lines + scan_lines)
+stable_headings = baseline_headings(SECTIONS)
+structured_inventory_matches = stable_inventory_matches(STRUCTURED, {
+  "nova_kronika_main.tex" => main_lines,
+})
 
 source_emphasis = main_lines.filter_map { |line| line.scan(/\\emph\{([^{}]*)\}/).flatten }.flatten
 typst_emphasis = front_lines.flat_map do |line|
@@ -162,10 +186,12 @@ end
 
 checks = {
   "frozenSources" => hashes == expected_hashes,
-  "titlePage" => front_lines.join("\n").include?("[Současná kronika]") && front_lines.join("\n").include?("subtitle: [TJ Sokol Poruba]") && front_lines.join("\n").include?("edition: [Digitální vydání]"),
+  "titlePage" => front_lines.join("\n").include?("[Současná kronika]") && front_lines.join("\n").include?("subtitle: [TJ Sokol Poruba]") && front_lines.join("\n").include?('image-source: "/images/cover.jpg"') && front_lines.join("\n").include?("edition: [Digitální vydání]"),
   "frontMatterText" => front_source == front_typst,
   "historicalOverviewText" => overview_source == overview_typst,
   "headingHierarchy" => expected_headings == actual_headings,
+  "stableSectionInventory" => stable_headings == actual_headings,
+  "stableStructuredInventory" => structured_inventory_matches,
   "emphasis" => source_emphasis == typst_emphasis,
   "externalLinks" => source_links == typst_links,
   "intentionalLineBreak" => main_lines[139].end_with?("\\\\") && front_lines[34].end_with?("\\"),
