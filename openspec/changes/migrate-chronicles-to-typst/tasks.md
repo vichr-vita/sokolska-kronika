@@ -35,8 +35,8 @@
 
 ## 6. Acceptance and cleanup
 
-- [ ] 6.1 Run a clean build and verify both required PDFs exist, are non-empty, and cause the build to fail when a referenced asset or source is unavailable.
-- [ ] 6.2 Compare every section title, authored text block, structured block, link target, image reference, and scan page against the stable LaTeX baseline; verify table associations, quotation nesting, verse lineation, intentional line breaks, and symbols, then resolve every unexplained omission, duplicate, or reordering.
+- [x] 6.1 Run a clean build and verify both required PDFs exist, are non-empty, and cause the build to fail when a referenced asset or source is unavailable.
+- [x] 6.2 Compare every section title, authored text block, structured block, link target, image reference, and scan page against the stable LaTeX baseline; verify table associations, quotation nesting, verse lineation, intentional line breaks, and symbols, then resolve every unexplained omission, duplicate, or reordering.
 - [ ] 6.3 Review both PDFs at title, contents, prose, list, table, quotation, verse, callout, image, scan, transition, and final pages for Czech glyphs, hyphenation, smart quotes, localized labels, language metadata, readable spacing, stable headings, useful media size, headers, and page numbers.
 - [ ] 6.4 Update in-document typesetting credits from LaTeX to Typst without changing the surrounding author statement.
 - [ ] 6.5 After both editions pass acceptance, remove the four superseded `.tex` files and LaTeX-specific instructions, then confirm a clean checkout builds using only documented Typst inputs.
