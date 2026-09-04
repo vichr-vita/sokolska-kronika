@@ -11,16 +11,16 @@
 
 ## 3. Pre-war chronicle conversion
 
-- [ ] 3.1 Convert the pre-war title, introductory pages, historical postcards, author text, and pre-1894 sections into `front-matter.typ`, preserving text, links, captions, and images.
-- [ ] 3.2 Convert complete year sections 1894 through 1900 into a named period file and compare its headings and normalized extracted text with LaTeX.
-- [ ] 3.3 Convert complete year sections 1901 through 1905 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.4 Convert complete year sections 1906 through 1910 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.5 Convert complete year sections 1911 through 1915 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.6 Convert complete year sections 1916 through 1920 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.7 Convert complete year sections 1921 through 1925 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.8 Convert complete year sections 1926 through 1930 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.9 Convert complete year sections 1931 through 1934 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
-- [ ] 3.10 Assemble all pre-war files in `chronicles/predvalecna/main.typ` and verify the full section order, contents links, bookmark tree, headers, and final page.
+- [x] 3.1 Convert the pre-war title, introductory pages, historical postcards, author text, and pre-1894 sections into `front-matter.typ`, preserving text, links, captions, and images.
+- [x] 3.2 Convert complete year sections 1894 through 1900 into a named period file and compare its headings and normalized extracted text with LaTeX.
+- [x] 3.3 Convert complete year sections 1901 through 1905 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.4 Convert complete year sections 1906 through 1910 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.5 Convert complete year sections 1911 through 1915 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.6 Convert complete year sections 1916 through 1920 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.7 Convert complete year sections 1921 through 1925 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.8 Convert complete year sections 1926 through 1930 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.9 Convert complete year sections 1931 through 1934 into a named period file and compare its headings, media references, and normalized extracted text with LaTeX.
+- [x] 3.10 Assemble all pre-war files in `chronicles/predvalecna/main.typ` and verify the full section order, contents links, bookmark tree, headers, and final page.
 
 ## 4. Contemporary chronicle conversion
 
