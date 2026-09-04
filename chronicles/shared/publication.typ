@@ -11,8 +11,13 @@
     header-ascent: 12mm,
     footer-descent: 12mm,
     header: context {
-      let previous-headings = query(selector(heading).before(here()))
-      let current = if previous-headings.len() > 0 {
+      let current-page = counter(page).get().first()
+      let all-headings = query(selector(heading))
+      let page-headings = all-headings.filter(item => item.location().page() == current-page)
+      let previous-headings = all-headings.filter(item => item.location().page() < current-page)
+      let current = if page-headings.len() > 0 {
+        page-headings.first().body
+      } else if previous-headings.len() > 0 {
         previous-headings.last().body
       } else {
         running-title
@@ -135,5 +140,13 @@
   #set par(first-line-indent: 0pt)
   #text(size: 8pt, weight: "bold", fill: dark-gray)[Novinový výstřižek]
   #v(5pt)
+  #body
+]
+
+#let verse(body) = block(
+  inset: (left: 2em),
+  width: 100%,
+)[
+  #set par(first-line-indent: 0pt, justify: false, spacing: 0pt)
   #body
 ]

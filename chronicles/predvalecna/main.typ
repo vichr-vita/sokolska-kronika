@@ -1,16 +1,16 @@
-#import "../shared/publication.typ": publication, publication-outline
+#import "../shared/publication.typ": publication
 
 #show: publication.with(
   title: "Předválečná kronika",
   running-title: "Předválečná kronika",
 )
 
-#publication-outline()
-
-= Připravované vydání
-
-Předválečná kronika TJ Sokol Poruba bude převedena do této edice. Zdroj projektu je na #link("https://github.com/vichr-vita/sokolska-kronika")[GitHubu].
-
-== O vydání
-
-Tento minimální vstupní soubor ověřuje společnou sazbu a navigaci.
+#include "content/front-matter.typ"
+#include "content/1894-1900.typ"
+#include "content/1901-1905.typ"
+#include "content/1906-1910.typ"
+#include "content/1911-1915.typ"
+#include "content/1916-1920.typ"
+#include "content/1921-1925.typ"
+#include "content/1926-1930.typ"
+#include "content/1931-1934.typ"
