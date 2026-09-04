@@ -5,9 +5,9 @@
 
 ## 2. Shared Typst publication layer
 
-- [ ] 2.1 Create the `chronicles/shared`, `chronicles/predvalecna/content`, and `chronicles/soucasna/content` structure with minimal edition entry points.
-- [ ] 2.2 Implement `chronicles/shared/publication.typ` with explicit Czech text and document language, common page geometry, typography, heading hierarchy, localized outline, bookmarks, links, running headers, and page numbers.
-- [ ] 2.3 Add focused helpers for title pages, full-page images, inclusive PDF-page ranges using `range(start, end, inclusive: true)`, image sequences, and newspaper clipping callouts; verify that media uses contain sizing and keeps its aspect ratio.
+- [x] 2.1 Create the `chronicles/shared`, `chronicles/predvalecna/content`, and `chronicles/soucasna/content` structure with minimal edition entry points.
+- [x] 2.2 Implement `chronicles/shared/publication.typ` with explicit Czech text and document language, common page geometry, typography, heading hierarchy, localized outline, bookmarks, links, running headers, and page numbers.
+- [x] 2.3 Add focused helpers for title pages, full-page images, inclusive PDF-page ranges using `range(start, end, inclusive: true)`, image sequences, and newspaper clipping callouts; verify that media uses contain sizing and keeps its aspect ratio.
 
 ## 3. Pre-war chronicle conversion
 
