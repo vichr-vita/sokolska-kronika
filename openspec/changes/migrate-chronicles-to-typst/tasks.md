@@ -24,14 +24,14 @@
 
 ## 4. Contemporary chronicle conversion
 
-- [ ] 4.1 Convert the contemporary title, introductory pages, author text, and historical overview into native Typst content files, preserving wording, hierarchy, links, and emphasis.
-- [ ] 4.2 Implement the three source-PDF ranges for pages 1 through 36 and the four May 2025 photographs in `scans.typ`, preserving their order and section boundaries.
-- [ ] 4.3 Assemble all contemporary files in `chronicles/soucasna/main.typ` and verify the full section order, contents links, bookmark tree, headers, scan boundaries, and final image.
+- [x] 4.1 Convert the contemporary title, introductory pages, author text, and historical overview into native Typst content files, preserving wording, hierarchy, links, and emphasis.
+- [x] 4.2 Implement the three source-PDF ranges for pages 1 through 36 and the four May 2025 photographs in `scans.typ`, preserving their order and section boundaries.
+- [x] 4.3 Assemble all contemporary files in `chronicles/soucasna/main.typ` and verify the full section order, contents links, bookmark tree, headers, scan boundaries, and final image.
 
 ## 5. Build and contributor documentation
 
-- [ ] 5.1 Replace the LaTeX commands in `build.sh` with strict Typst compilation from repository root to the two existing versioned output filenames, including clear missing-tool and compilation failures.
-- [ ] 5.2 Rewrite `README.md` with the tested Typst version, installation prerequisite, project layout, build and output details, shared helper reference, and conventions for editing text or adding media.
+- [x] 5.1 Replace the LaTeX commands in `build.sh` with strict Typst compilation from repository root to the two existing versioned output filenames, including clear missing-tool and compilation failures.
+- [x] 5.2 Rewrite `README.md` with the tested Typst version, installation prerequisite, project layout, build and output details, shared helper reference, and conventions for editing text or adding media.
 
 ## 6. Acceptance and cleanup
 
