@@ -197,6 +197,10 @@ front_source_lines = main_lines[115..142] + source_lines[7..83]
 front_source_media_lines = main_lines[93..142] + source_lines[7..83]
 front_source_text = latex_text(front_source_lines)
 front_typst_text = typst_text(front_body_lines)
+expected_front_typst_text = front_source_text.sub(/\bLaTeX\b/, "Typst")
+credit_system_only_change = front_source_text.scan(/\bLaTeX\b/).length == 1 &&
+  front_typst_text.scan(/\bTypst\b/).length == 1 &&
+  expected_front_typst_text == front_typst_text
 front_source_media = front_source_media_lines.filter_map { |line| line[/\\adjustimage\{[^}]*\}\{([^}]+)\}/, 1] }
 front_typst_media = (front_lines + front_body_lines).filter_map do |line|
   line[/image(?:-source:\s*|\()"\/([^\"]+)"/, 1]
@@ -224,12 +228,14 @@ front_result = {
   },
   "normalizedText" => {
     "sourceSha256" => Digest::SHA256.hexdigest(front_source_text),
+    "expectedTypstSha256" => Digest::SHA256.hexdigest(expected_front_typst_text),
     "typstSha256" => Digest::SHA256.hexdigest(front_typst_text),
-    "match" => front_source_text == front_typst_text,
+    "creditSystemOnlyChange" => credit_system_only_change,
+    "match" => expected_front_typst_text == front_typst_text,
   },
 }
-unless front_source_text == front_typst_text
-  source_words = front_source_text.split
+unless expected_front_typst_text == front_typst_text
+  source_words = expected_front_typst_text.split
   typst_words = front_typst_text.split
   difference = [source_words.length, typst_words.length].min.times.find { |i| source_words[i] != typst_words[i] }
   difference ||= [source_words.length, typst_words.length].min

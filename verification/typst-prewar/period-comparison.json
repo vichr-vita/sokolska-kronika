@@ -43,7 +43,9 @@
     },
     "normalizedText": {
       "sourceSha256": "919116810d0e0843446d5ba91bbefa87d77dc952b1a5c3b78b836432bc947798",
-      "typstSha256": "919116810d0e0843446d5ba91bbefa87d77dc952b1a5c3b78b836432bc947798",
+      "expectedTypstSha256": "b6f4859f65435e78d2c3ffb8f6967c1fafdfcb11a8b02143c07c58bacf80e826",
+      "typstSha256": "b6f4859f65435e78d2c3ffb8f6967c1fafdfcb11a8b02143c07c58bacf80e826",
+      "creditSystemOnlyChange": true,
       "match": true
     }
   },

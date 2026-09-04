@@ -7,6 +7,7 @@
 )
 
 #let chronicle-pages() = {
+  pagebreak(weak: true)
   heading(level: 1)[Výběr z rodinné kroniky Bártů]
   pdf-page-range("/scans/nova_kronika_scans.pdf", 4, 10)
 

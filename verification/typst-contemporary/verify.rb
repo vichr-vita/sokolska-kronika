@@ -131,6 +131,10 @@ hashes = {
 
 front_source = prose([main_lines[130], main_lines[132], main_lines[134], main_lines[136], main_lines[139], main_lines[140]], method(:latex_inline))
 front_typst = prose(front_lines[25..35], method(:typst_inline))
+expected_front_typst = front_source.sub(/\bLaTeX\b/, "Typst")
+credit_system_only_change = front_source.scan(/\bLaTeX\b/).length == 1 &&
+  front_typst.scan(/\bTypst\b/).length == 1 &&
+  expected_front_typst == front_typst
 overview_source = prose(overview_lines, method(:latex_inline))
 overview_typst = prose(historical_lines, method(:typst_inline))
 expected_headings = source_headings(main_lines, overview_lines)
@@ -178,7 +182,7 @@ photo_dimensions = source_photos.map do |path|
 end
 embedded_photo_dimensions = output_images.last(4).map { |row| row.values_at("width", "height") }
 
-expected_media_pages = (4..6).to_a + (12..18).to_a + (20..49).to_a
+expected_media_pages = (4..6).to_a + (13..19).to_a + (21..50).to_a
 ordinary_page = run("pdftotext", "-layout", "-f", "7", "-l", "7", PDF, "-")
 media_text = expected_media_pages.flat_map do |page|
   run("pdftotext", "-f", page.to_s, "-l", page.to_s, PDF, "-").strip.empty? ? [] : [page]
@@ -187,7 +191,8 @@ end
 checks = {
   "frozenSources" => hashes == expected_hashes,
   "titlePage" => front_lines.join("\n").include?("[Současná kronika]") && front_lines.join("\n").include?("subtitle: [TJ Sokol Poruba]") && front_lines.join("\n").include?('image-source: "/images/cover.jpg"') && front_lines.join("\n").include?("edition: [Digitální vydání]"),
-  "frontMatterText" => front_source == front_typst,
+  "frontMatterText" => expected_front_typst == front_typst,
+  "creditSystemOnlyChange" => credit_system_only_change,
   "historicalOverviewText" => overview_source == overview_typst,
   "headingHierarchy" => expected_headings == actual_headings,
   "stableSectionInventory" => stable_headings == actual_headings,
@@ -221,6 +226,12 @@ report = {
   "linkAnnotations" => link_count,
   "scanRanges" => typst_ranges,
   "photos" => typst_photos,
+  "creditComparison" => {
+    "sourceSha256" => Digest::SHA256.hexdigest(front_source),
+    "expectedTypstSha256" => Digest::SHA256.hexdigest(expected_front_typst),
+    "typstSha256" => Digest::SHA256.hexdigest(front_typst),
+    "onlySystemNameChanged" => credit_system_only_change,
+  },
   "checks" => checks,
   "allPassed" => checks.values.all?,
 }

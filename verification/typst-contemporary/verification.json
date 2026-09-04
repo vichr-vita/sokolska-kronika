@@ -1,7 +1,7 @@
 {
   "pdf": "soucasna_kronika_v2_0_0.pdf",
-  "bytes": 86670661,
-  "pages": 49,
+  "bytes": 86671457,
+  "pages": 50,
   "outlineEntries": 13,
   "linkAnnotations": 13,
   "scanRanges": [
@@ -24,10 +24,17 @@
     "scans/2025_05/IMG_20250321_110058.jpg",
     "scans/2025_05/IMG_20250321_110152.jpg"
   ],
+  "creditComparison": {
+    "sourceSha256": "0af94f866ea00c3e4072a2f268773952e421af8530ce15287b1c907b03cec5be",
+    "expectedTypstSha256": "e2b7b4ee2e9bdeb376a397a36b6346e9ec3108b3f73a06b7ac70fd2a203f6a94",
+    "typstSha256": "e2b7b4ee2e9bdeb376a397a36b6346e9ec3108b3f73a06b7ac70fd2a203f6a94",
+    "onlySystemNameChanged": true
+  },
   "checks": {
     "frozenSources": true,
     "titlePage": true,
     "frontMatterText": true,
+    "creditSystemOnlyChange": true,
     "historicalOverviewText": true,
     "headingHierarchy": true,
     "stableSectionInventory": true,

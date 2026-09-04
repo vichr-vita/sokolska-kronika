@@ -14,7 +14,7 @@ Jelikož se jedná o především digitální dokument, obsah je interaktivní. 
 
 Projekt je dostupný na stránce #link("https://github.com/vichr-vita/sokolska-kronika")[GitHub] (#text(style: "italic")[#raw("https://github.com/vichr-vita/sokolska-kronika")]), která umožňuje poskytnutí technické zpětné vazby a návrhů na úpravu. Velmi si vážím jakékoliv zpětné vazby, která by mohla přispět k dalšímu zlepšení sazby a celkového vzhledu dokumentu. Vaše názory a návrhy jsou vítány a mohou být zaslány prostřednictvím GitHubu. V~případě jiných dotazů je možné psát i na email #text(style: "italic")[me#sym.at#h(0pt)vichr.me].
 
-Toto dílo vzniká za použití volně dostupného open-source jazyka pro typografické zpracování a sazbu, LaTeX. Děkuji všem, kteří se na tomto projektu podílejí, a doufám, že vám digitální kronika přinese mnoho užitečných informací a radosti.
+Toto dílo vzniká za použití volně dostupného open-source jazyka pro typografické zpracování a sazbu, Typst. Děkuji všem, kteří se na tomto projektu podílejí, a doufám, že vám digitální kronika přinese mnoho užitečných informací a radosti.
 
 #v(1cm)
 S úctou a sokolským „Nazdar!“, \
