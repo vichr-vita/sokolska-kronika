@@ -1,22 +1,38 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if ! command -v typst >/dev/null 2>&1; then
+  printf 'Error: Typst 0.15.1 is required but "typst" was not found in PATH.\n' >&2
+  exit 127
+fi
+
+script_dir="${BASH_SOURCE[0]%/*}"
+[[ "$script_dir" == "${BASH_SOURCE[0]}" ]] && script_dir="."
+repo_root="$(cd -- "$script_dir" && pwd)"
+cd -- "$repo_root"
 
 version="2_0_0"
+prewar_output="out/predvalecna_kronika_v${version}.pdf"
+contemporary_output="out/soucasna_kronika_v${version}.pdf"
 
-# Build old chronicle (Předválečná kronika)
-echo "Building Předválečná kronika..."
-pdflatex -output-directory=out stara_kronika_main.tex
+mkdir -p out
+rm -f -- "$prewar_output" "$contemporary_output"
 
-out_file_stara="./out/predvalecna_kronika_v${version}.pdf"
-cp ./out/stara_kronika_main.pdf $out_file_stara
-echo "file: ${out_file_stara}"
+compile() {
+  local label="$1"
+  local source="$2"
+  local output="$3"
 
-# Build new chronicle (Současná kronika)
-echo "Building Současná kronika..."
-pdflatex -output-directory=out nova_kronika_main.tex
+  printf 'Building %s...\n' "$label"
+  if ! typst compile --root . "$source" "$output"; then
+    printf 'Error: failed to compile %s from %s.\n' "$label" "$source" >&2
+    return 1
+  fi
+  printf 'Created %s\n' "$output"
+}
 
-out_file_nova="./out/soucasna_kronika_v${version}.pdf"
-cp ./out/nova_kronika_main.pdf $out_file_nova
-echo "file: ${out_file_nova}"
+compile "Předválečná kronika" "chronicles/predvalecna/main.typ" "$prewar_output"
+compile "Současná kronika" "chronicles/soucasna/main.typ" "$contemporary_output"
 
-echo "Both chronicles built successfully!"
-
+printf 'Both chronicles built successfully.\n'
