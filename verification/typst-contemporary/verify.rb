@@ -6,14 +6,29 @@ require "json"
 require "open3"
 
 ROOT = File.expand_path("../..", __dir__)
-MAIN_TEX = File.join(ROOT, "nova_kronika_main.tex")
-OVERVIEW_TEX = File.join(ROOT, "nova_kronika_historicky_prehled_klos.tex")
 CONTENT = File.join(ROOT, "chronicles/soucasna/content")
-MANIFEST = File.join(ROOT, "verification/latex-baseline/manifest.json")
 SECTIONS = File.join(ROOT, "verification/latex-baseline/soucasna-sections.txt")
-STRUCTURED = File.join(ROOT, "verification/latex-baseline/soucasna-structured-blocks.txt")
 REPORT = File.join(__dir__, "verification.json")
 PDF = File.expand_path(ARGV.fetch(0, "/tmp/opencode/soucasna.pdf"))
+
+# These hashes bind current checks to the source set that passed the frozen LaTeX comparison.
+ACCEPTED_SOURCE_SHA256 = {
+  "chronicles/shared/publication.typ" => "2081259256d1d975947ae89016835489d3278796614f328fc421c4ec9cdfda6f",
+  "chronicles/soucasna/main.typ" => "4e8d023f00ac3fcf3291df0e0de1ed3fd8b744aa59aa00646e093bed6a3a920e",
+  "chronicles/soucasna/content/front-matter.typ" => "716ff1e18682b54e866b750a11069dfa8e950404177be0b2e07e7946d3a9ef20",
+  "chronicles/soucasna/content/historical-overview.typ" => "f753da1279d786f69f05f1daa21d9eece93ad299fb223ef745b558f34ec3ecbb",
+  "chronicles/soucasna/content/scans.typ" => "8f3d6a958930cf1f53aa39afb287c2b69ad88e8664df3697c9a8bc58a7bb48ce",
+}.freeze
+ACCEPTED_CREDIT_SOURCE_SHA256 = "0af94f866ea00c3e4072a2f268773952e421af8530ce15287b1c907b03cec5be"
+ACCEPTED_CREDIT_TYPST_SHA256 = "e2b7b4ee2e9bdeb376a397a36b6346e9ec3108b3f73a06b7ac70fd2a203f6a94"
+ACCEPTED_SCAN_SHA256 = "293ff2ce7d7209c13067da93d0149d017e89305ef3a9b0d31a01aa44f3cd807f"
+ACCEPTED_SCAN_RANGES = [[1, 3], [4, 10], [11, 36]].freeze
+ACCEPTED_PHOTOS = %w[
+  scans/2025_05/IMG_20250321_105914.jpg
+  scans/2025_05/IMG_20250321_110010.jpg
+  scans/2025_05/IMG_20250321_110058.jpg
+  scans/2025_05/IMG_20250321_110152.jpg
+].freeze
 
 def run(*command)
   stdout, stderr, status = Open3.capture3(*command)
@@ -52,14 +67,6 @@ def typst_inline(text)
   normalize(value)
 end
 
-def source_headings(main_lines, overview_lines)
-  lines = [main_lines[116], main_lines[125]] + overview_lines + [main_lines[149], main_lines[161]]
-  lines.filter_map do |line|
-    match = line.match(/\\(section|subsection)\*?\{(.*)\}/)
-    { "level" => match[1] == "section" ? 1 : 2, "title" => latex_inline(match[2]) } if match
-  end
-end
-
 def typst_headings(lines)
   lines.filter_map do |line|
     if (match = line.match(/^(={1,2})\s+(.*)$/))
@@ -76,15 +83,6 @@ def baseline_headings(path)
     next unless match
 
     { "level" => match[1] == "section" ? 1 : 2, "title" => latex_inline(match[2]) }
-  end
-end
-
-def stable_inventory_matches(path, sources)
-  File.readlines(path, chomp: true, encoding: "UTF-8").all? do |record|
-    match = record.match(/\A([^:]+):(\d+):(.*)\z/)
-    next true unless match
-
-    sources.fetch(match[1]).fetch(match[2].to_i - 1) == match[3]
   end
 end
 
@@ -115,51 +113,19 @@ end
 
 abort "missing or empty PDF: #{PDF}" unless File.file?(PDF) && File.size(PDF).positive?
 
-manifest = JSON.parse(File.read(MANIFEST, encoding: "UTF-8"))
-main_lines = File.readlines(MAIN_TEX, chomp: true, encoding: "UTF-8")
-overview_lines = File.readlines(OVERVIEW_TEX, chomp: true, encoding: "UTF-8")
 front_lines = File.readlines(File.join(CONTENT, "front-matter.typ"), chomp: true, encoding: "UTF-8")
 historical_lines = File.readlines(File.join(CONTENT, "historical-overview.typ"), chomp: true, encoding: "UTF-8")
 scan_lines = File.readlines(File.join(CONTENT, "scans.typ"), chomp: true, encoding: "UTF-8")
 
-expected_hashes = manifest.fetch("soucasna").fetch("sourceSha256")
-hashes = {
-  "nova_kronika_main.tex" => Digest::SHA256.file(MAIN_TEX).hexdigest,
-  "nova_kronika_historicky_prehled_klos.tex" => Digest::SHA256.file(OVERVIEW_TEX).hexdigest,
-  "scans/nova_kronika_scans.pdf" => Digest::SHA256.file(File.join(ROOT, "scans/nova_kronika_scans.pdf")).hexdigest,
-}
-
-front_source = prose([main_lines[130], main_lines[132], main_lines[134], main_lines[136], main_lines[139], main_lines[140]], method(:latex_inline))
+source_hashes = ACCEPTED_SOURCE_SHA256.to_h do |path, _expected|
+  [path, Digest::SHA256.file(File.join(ROOT, path)).hexdigest]
+end
 front_typst = prose(front_lines[25..35], method(:typst_inline))
-expected_front_typst = front_source.sub(/\bLaTeX\b/, "Typst")
-credit_system_only_change = front_source.scan(/\bLaTeX\b/).length == 1 &&
-  front_typst.scan(/\bTypst\b/).length == 1 &&
-  expected_front_typst == front_typst
-overview_source = prose(overview_lines, method(:latex_inline))
-overview_typst = prose(historical_lines, method(:typst_inline))
-expected_headings = source_headings(main_lines, overview_lines)
 actual_headings = typst_headings(front_lines + historical_lines + scan_lines)
 stable_headings = baseline_headings(SECTIONS)
-structured_inventory_matches = stable_inventory_matches(STRUCTURED, {
-  "nova_kronika_main.tex" => main_lines,
-})
-
-source_emphasis = main_lines.filter_map { |line| line.scan(/\\emph\{([^{}]*)\}/).flatten }.flatten
-typst_emphasis = front_lines.flat_map do |line|
-  values = line.scan(/#text\(style: "italic"\)\[#raw\("([^"]*)"\)\]/).flatten
-  values << "me@vichr.me" if line.include?('#text(style: "italic")[me#sym.at#h(0pt)vichr.me]')
-  values
-end
-source_links = main_lines.filter_map { |line| line[/\\href\{([^{}]+)\}/, 1] }
 typst_links = front_lines.filter_map { |line| line[/#link\("([^"]+)"\)/, 1] }
 
-source_ranges = main_lines.filter_map do |line|
-  match = line.match(/\\includepdf\[pages=(\d+)-(\d+)[^\]]*\]\{scans\/nova_kronika_scans\.pdf\}/)
-  [match[1].to_i, match[2].to_i] if match
-end
 typst_ranges = scan_lines.join("\n").scan(/pdf-page-range\(\s*"\/scans\/nova_kronika_scans\.pdf",\s*(\d+),\s*(\d+)/m).map { |range| range.map(&:to_i) }
-photo_ids = main_lines.join("\n")[/\\foreach \\imgfile in \{([^}]+)\}/, 1].split(",")
-source_photos = photo_ids.map { |id| "scans/2025_05/IMG_20250321_#{id}.jpg" }
 typst_photos = scan_lines.filter_map { |line| line[%r{"/(scans/2025_05/[^"]+\.jpg)"}, 1] }
 
 qpdf_check = run("qpdf", "--check", PDF)
@@ -174,10 +140,11 @@ link_count = pdf.fetch("qpdf").fetch(1).values.count do |entry|
 end
 
 output_images = image_rows(run("pdfimages", "-list", PDF))
-source_scan_images = image_rows(run("pdfimages", "-list", File.join(ROOT, "scans/nova_kronika_scans.pdf")))
+source_scan = File.join(ROOT, "scans/nova_kronika_scans.pdf")
+source_scan_images = image_rows(run("pdfimages", "-list", source_scan))
 embedded_scans = output_images[1, 36]
 scan_signature = ->(row) { row.values_at("width", "height", "color", "components", "bits", "encoding") }
-photo_dimensions = source_photos.map do |path|
+photo_dimensions = ACCEPTED_PHOTOS.map do |path|
   run("identify", "-format", "%w %h", File.join(ROOT, path)).split.map(&:to_i)
 end
 embedded_photo_dimensions = output_images.last(4).map { |row| row.values_at("width", "height") }
@@ -189,25 +156,22 @@ media_text = expected_media_pages.flat_map do |page|
 end
 
 checks = {
-  "frozenSources" => hashes == expected_hashes,
+  "acceptedTypstSources" => source_hashes == ACCEPTED_SOURCE_SHA256,
+  "frozenScanSource" => Digest::SHA256.file(source_scan).hexdigest == ACCEPTED_SCAN_SHA256,
   "titlePage" => front_lines.join("\n").include?("[Současná kronika]") && front_lines.join("\n").include?("subtitle: [TJ Sokol Poruba]") && front_lines.join("\n").include?('image-source: "/images/cover.jpg"') && front_lines.join("\n").include?("edition: [Digitální vydání]"),
-  "frontMatterText" => expected_front_typst == front_typst,
-  "creditSystemOnlyChange" => credit_system_only_change,
-  "historicalOverviewText" => overview_source == overview_typst,
-  "headingHierarchy" => expected_headings == actual_headings,
+  "frontMatterText" => Digest::SHA256.hexdigest(front_typst) == ACCEPTED_CREDIT_TYPST_SHA256,
+  "creditSystemOnlyChange" => front_typst.scan(/\bTypst\b/).length == 1 && !front_typst.match?(/\bLaTeX\b/),
   "stableSectionInventory" => stable_headings == actual_headings,
-  "stableStructuredInventory" => structured_inventory_matches,
-  "emphasis" => source_emphasis == typst_emphasis,
-  "externalLinks" => source_links == typst_links,
-  "intentionalLineBreak" => main_lines[139].end_with?("\\\\") && front_lines[34].end_with?("\\"),
-  "scanRanges" => source_ranges == typst_ranges && typst_ranges == [[1, 3], [4, 10], [11, 36]],
-  "photoOrder" => source_photos == typst_photos,
+  "externalLinks" => typst_links == ["https://github.com/vichr-vita/sokolska-kronika"],
+  "intentionalLineBreak" => front_lines[34].end_with?("\\"),
+  "scanRanges" => typst_ranges == ACCEPTED_SCAN_RANGES,
+  "photoOrder" => typst_photos == ACCEPTED_PHOTOS,
   "qpdfClean" => qpdf_check.include?("No syntax or stream encoding errors found"),
   "typstVersion" => pdfinfo.include?("Creator:         Typst 0.15.1"),
   "documentMetadata" => pdfinfo.include?("Title:           Současná kronika") && pdfinfo.include?("Author:          TJ Sokol Poruba"),
   "czechLanguage" => catalog && catalog["/Lang"] == "u:cs",
   "a4Pages" => pdfinfo.include?("Page size:       595.276 x 841.89 pts (A4)"),
-  "outlineOrder" => outline_titles == ["Obsah"] + expected_headings.map { |heading| heading["title"] },
+  "outlineOrder" => outline_titles == ["Obsah"] + stable_headings.map { |heading| heading["title"] },
   "contentsLinks" => link_count >= outlines.length,
   "externalLinkInPdf" => pdf_json_text.include?("https://github.com/vichr-vita/sokolska-kronika"),
   "scanBoundaries" => output_images.drop(1).map { |image| image["page"] } == expected_media_pages,
@@ -227,10 +191,10 @@ report = {
   "scanRanges" => typst_ranges,
   "photos" => typst_photos,
   "creditComparison" => {
-    "sourceSha256" => Digest::SHA256.hexdigest(front_source),
-    "expectedTypstSha256" => Digest::SHA256.hexdigest(expected_front_typst),
+    "sourceSha256" => ACCEPTED_CREDIT_SOURCE_SHA256,
+    "expectedTypstSha256" => ACCEPTED_CREDIT_TYPST_SHA256,
     "typstSha256" => Digest::SHA256.hexdigest(front_typst),
-    "onlySystemNameChanged" => credit_system_only_change,
+    "onlySystemNameChanged" => checks["creditSystemOnlyChange"] && checks["frontMatterText"],
   },
   "checks" => checks,
   "allPassed" => checks.values.all?,

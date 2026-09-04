@@ -31,15 +31,12 @@
     "onlySystemNameChanged": true
   },
   "checks": {
-    "frozenSources": true,
+    "acceptedTypstSources": true,
+    "frozenScanSource": true,
     "titlePage": true,
     "frontMatterText": true,
     "creditSystemOnlyChange": true,
-    "historicalOverviewText": true,
-    "headingHierarchy": true,
     "stableSectionInventory": true,
-    "stableStructuredInventory": true,
-    "emphasis": true,
     "externalLinks": true,
     "intentionalLineBreak": true,
     "scanRanges": true,
