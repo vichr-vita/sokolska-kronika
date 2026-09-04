@@ -1,0 +1,45 @@
+{
+  "captured": "2026-09-04",
+  "tools": {
+    "pdftex": "3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux)",
+    "poppler": "26.07.0",
+    "qpdf": "12.4.0"
+  },
+  "predvalecna": {
+    "entryPoint": "stara_kronika_main.tex",
+    "includedSource": "stara_kronika.tex",
+    "passesToStable": 3,
+    "pages": 145,
+    "sectionDestinations": 200,
+    "topLevelBookmarks": 47,
+    "sourceSha256": {
+      "stara_kronika_main.tex": "5f3a140cc3f77ad44f3493ffd6e18e06b551a641f181307586a4b7cca8cf0d2a",
+      "stara_kronika.tex": "18aac778067521d3f50151443fb290589b20fb67732980d8ffe96fe3473bd85d"
+    },
+    "stableStateSha256": {
+      "aux": "0deb565b473d8eb4d00c2ac43e2ae3e1495b5dc6f3d72c6045d86ea2966844e3",
+      "toc": "7bf6bb61dfa13ff553549550496122a9286ffe09874bf8d7cbe6084f88a93022"
+    },
+    "pdfSha256": "a03419b47adeb309855a353a934081cb5a8de64ac6a65ee7fcd5bc3aba044824",
+    "textSha256": "a32244ddb9bbd0b02968e21781e12af05b0d0d8c820071fe4386562af76d7508"
+  },
+  "soucasna": {
+    "entryPoint": "nova_kronika_main.tex",
+    "includedSource": "nova_kronika_historicky_prehled_klos.tex",
+    "passesToStable": 2,
+    "pages": 53,
+    "sectionDestinations": 12,
+    "topLevelBookmarks": 5,
+    "sourceSha256": {
+      "nova_kronika_main.tex": "ba3ddf9aaebfd6add08f524c74eefab631514ef0ff51d2ba869e862b2eda4e2a",
+      "nova_kronika_historicky_prehled_klos.tex": "f2d094c48fbedabdddbebaf16af211e981c32ae3d1544d74de43a169dc2969bb",
+      "scans/nova_kronika_scans.pdf": "293ff2ce7d7209c13067da93d0149d017e89305ef3a9b0d31a01aa44f3cd807f"
+    },
+    "stableStateSha256": {
+      "aux": "b4087427dd3ebb34d08aae652e645d47bb6d0c754f2e4d1db3c7bc46c02712d0",
+      "toc": "d4c8f9ec36c8ee4ac785d90420e65f68363f4a07608537d7261a475a6a7ebd23"
+    },
+    "pdfSha256": "b9bf89bbebd8dc9e63e94d20da556e1191d5014a3edd853ae1912000dc032814",
+    "textSha256": "d2dcd319c786ee644018b724be20f6718711e17d96370158145241029cf065fd"
+  }
+}

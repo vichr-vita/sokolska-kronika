@@ -1,0 +1,5 @@
+# kind | rendered page/count | target
+external | page 9 | https://github.com/vichr-vita/sokolska-kronika
+internal section destinations | 12 | section*.1 through section*.12
+page destinations | 53 | page.1 through page.53
+top-level bookmarks | 5 | contents hierarchy recorded in soucasna-sections.txt

@@ -1,0 +1,14 @@
+# source location | asset | rendered use
+stara_kronika_main.tex:100 | images/cover.jpg | title image
+stara_kronika_main.tex:121 | images/uvodni_slovo/1.jpeg | introductory page
+stara_kronika_main.tex:123 | images/uvodni_slovo/2.jpeg | introductory page
+stara_kronika_main.tex:125 | images/uvodni_slovo/3.jpeg | introductory page
+stara_kronika.tex:15 | images/stara_kronika_transcript_fotky/1a.png | historical postcard
+stara_kronika.tex:16 | images/stara_kronika_transcript_fotky/1b.png | historical postcard
+stara_kronika.tex:17 | images/stara_kronika_transcript_fotky/1c.png | historical postcard
+stara_kronika.tex:2808 | images/stara_kronika_transcript_fotky/2.png | chronicle image
+stara_kronika.tex:3669 | images/stara_kronika_transcript_fotky/3.png | 1933 image
+stara_kronika.tex:3675 | images/stara_kronika_transcript_fotky/4.png | 1933 image
+stara_kronika.tex:3681 | images/stara_kronika_transcript_fotky/5.png | 1933 image
+stara_kronika.tex:3687 | images/stara_kronika_transcript_fotky/6.png | 1933 image
+stara_kronika.tex:3693 | images/stara_kronika_transcript_fotky/7.png | 1933 image

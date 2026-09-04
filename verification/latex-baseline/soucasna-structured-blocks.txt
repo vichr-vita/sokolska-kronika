@@ -1,0 +1,6 @@
+nova_kronika_main.tex:97:\begin{center}
+nova_kronika_main.tex:99:{\Huge\bfseries\color{sokolred} Současná kronika}\\[1cm]
+nova_kronika_main.tex:100:{\Large\bfseries TJ Sokol Poruba}\\[2cm]
+nova_kronika_main.tex:101:\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/cover.jpg}\\[2cm]
+nova_kronika_main.tex:102:{\large Digitální vydání}\\[0.5cm]
+nova_kronika_main.tex:140:\noindent S úctou a sokolským \enquote{Nazdar!},\\

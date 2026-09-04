@@ -1,0 +1,9 @@
+# source location | asset | rendered use
+nova_kronika_main.tex:101 | images/cover.jpg | title image
+nova_kronika_main.tex:122 | scans/nova_kronika_scans.pdf pages 1-3 | introductory pages, in order
+nova_kronika_main.tex:160 | scans/nova_kronika_scans.pdf pages 4-10 | family chronicle, in order
+nova_kronika_main.tex:168 | scans/nova_kronika_scans.pdf pages 11-36 | contemporary chronicle, in order
+nova_kronika_main.tex:171-177 | scans/2025_05/IMG_20250321_105914.jpg | first May 2025 photograph
+nova_kronika_main.tex:171-177 | scans/2025_05/IMG_20250321_110010.jpg | second May 2025 photograph
+nova_kronika_main.tex:171-177 | scans/2025_05/IMG_20250321_110058.jpg | third May 2025 photograph
+nova_kronika_main.tex:171-177 | scans/2025_05/IMG_20250321_110152.jpg | fourth May 2025 photograph

@@ -1,0 +1,705 @@
+stara_kronika_main.tex:96:\begin{center}
+stara_kronika_main.tex:98:{\Huge\bfseries\color{sokolred} Předválečná kronika}\\[1cm]
+stara_kronika_main.tex:99:{\Large\bfseries TJ Sokol Poruba}\\[2cm]
+stara_kronika_main.tex:100:\adjustimage{width=\textwidth, height=\textheight, keepaspectratio}{images/cover.jpg}\\[2cm]
+stara_kronika_main.tex:101:{\large Digitální vydání}\\[0.5cm]
+stara_kronika_main.tex:142:\noindent S úctou a sokolským \enquote{Nazdar!},\\
+stara_kronika.tex:23:\textbf{Horní pohlednice:}\\
+stara_kronika.tex:24:PORUBA. Sokolovna.\\
+stara_kronika.tex:25:r. 1901.\\
+stara_kronika.tex:28:\textbf{Prostřední pohlednice:}\\
+stara_kronika.tex:31:\textbf{Spodní pohlednice:}\\
+stara_kronika.tex:32:RESTAURACE\\
+stara_kronika.tex:33:SOKOLOVNA\\
+stara_kronika.tex:34:ZAHRADA\\
+stara_kronika.tex:35:A KUŽELNA\\
+stara_kronika.tex:36:Poruba.\\
+stara_kronika.tex:37:Spisar\\
+stara_kronika.tex:52:\begin{center}
+stara_kronika.tex:57:\noindent Svinov v~srpnu 1933.\\[0.5cm]
+stara_kronika.tex:58:\textbf{Josef Bárta},\\
+stara_kronika.tex:97:\begin{description}
+stara_kronika.tex:98:\item[Starostou:] Josef Tichý, rolník v~Porubě.
+stara_kronika.tex:99:\item[Jeho náměstkem:] Josef Bárta, nadučitel v~Porubě. \checkmark
+stara_kronika.tex:100:\item[Pokladníkem:] Rudolf Still, šafář u~velkostatku v~Porubě.
+stara_kronika.tex:101:\item[Hospodářem:] Antonín Besta, rolník a~starosta obce.
+stara_kronika.tex:102:\item[Členové výboru:] MUDr Jan Moravec, lékař v~Klimkovicích,\\
+stara_kronika.tex:103:    Frydolín Strnad, mlynář ve Svinově,\\
+stara_kronika.tex:104:    František Švidrnoch, maj.\ hostince v~Porubě,\\
+stara_kronika.tex:105:    František Martiník, hostinský ve Vřesině,\\
+stara_kronika.tex:107:\item[Dozorci cvičení:] Josef Vilts, rolník v~Porubě,\\
+stara_kronika.tex:109:\item[Členové oblekové komise:] Ambrož Zdražila, Josef Bárta, Jan Dedek.
+stara_kronika.tex:110:\item[Náčelníkem a~jednatelem:] Jan Dedek, ml.\ učitel v~Porubě. \checkmark
+stara_kronika.tex:120:\begin{enumerate}
+stara_kronika.tex:175:\begin{description}
+stara_kronika.tex:176:\item[Starostou:] JUDr Rudolf Hess, advokát v~Klimkovicích.
+stara_kronika.tex:177:\item[Náměstkem:] Antonín Besta, rolník v~Porubě.
+stara_kronika.tex:178:\item[Náčelníkem:] Josef Bárta, nadučitel.
+stara_kronika.tex:179:\item[Jednatelem:] Fr.\ Vl.\ Sigmund, obchodník v~Porubě.
+stara_kronika.tex:180:\item[Pokladníkem:] Josef Vilts, rolník v~Porubě.
+stara_kronika.tex:181:\item[Hospodářem:] Jan Malík.
+stara_kronika.tex:182:\item[Členy výboru:] Dr Jan Moravec, lékař v~Klimkovicích,\\
+stara_kronika.tex:183:    Josef Tichý, rolník v~Porubě,\\
+stara_kronika.tex:184:    Matěj, četník ze Hrabové,\\
+stara_kronika.tex:185:    Ig.\ Blažej, stolař v~Porubě (byl též cvičitelem),\\
+stara_kronika.tex:189:\noindent Usneseno předplatiti časopisy: \emph{Sokol}, \emph{Radhošť} (redaktor Frant.\ Tůma), \emph{Hospodář}.\\
+stara_kronika.tex:190:Br.\ Hill předplatil \emph{Opavský Týdenník} a~\emph{Nazdar!}\\
+stara_kronika.tex:191:Br.\ Sigmund předplatil \emph{Humoristické Listy}.\\
+stara_kronika.tex:226:\begin{itemize}
+stara_kronika.tex:233:\begin{description}
+stara_kronika.tex:234:\item[Starostou:] Dr Rudolf Hess.
+stara_kronika.tex:235:\item[Náčelníkem:] Josef Uherek.
+stara_kronika.tex:236:\item[Cvičitelem:] Gustav Husník ze Svinova.
+stara_kronika.tex:237:\item[Jednatelem:] Adolf Sokol.
+stara_kronika.tex:238:\item[Vyslancem do Č.O.S.:] Sokol-Tůma.
+stara_kronika.tex:239:\item[Vyslancem do župy:] Dr Hess.
+stara_kronika.tex:240:\item[Předsedou zábavního odboru:] Josef Bárta.
+stara_kronika.tex:244:\begin{enumerate}
+stara_kronika.tex:266:\begin{description}
+stara_kronika.tex:267:\item[Starostou:] Josef Bárta.
+stara_kronika.tex:268:\item[Náměstkem:] Josef Vilts.
+stara_kronika.tex:269:\item[Náčelníkem:] Adolf Sokol.
+stara_kronika.tex:270:\item[Jednatelem:] Fr.\ Vl.\ Sigmund.
+stara_kronika.tex:271:\item[Pokladníkem:] Rudolf Hill.
+stara_kronika.tex:272:\item[Ostatní členové:] Josef Tichý, Ant.\ Besta, Fr.\ Kozub, Frant.\ Kudela, Hajduk, Lazar Eduard.
+stara_kronika.tex:282:\begin{itemize}
+stara_kronika.tex:300:\begin{description}
+stara_kronika.tex:301:\item[Starostou zvolen:] Antonín Besta.
+stara_kronika.tex:302:\item[Jeho náměstkem:] Josef Vilts.
+stara_kronika.tex:303:\item[Náčelníkem:] Adolf Sokol.
+stara_kronika.tex:304:\item[Jeho náměstkem:] Ig.\ Blažej.
+stara_kronika.tex:305:\item[Jednatelem:] Fr.\ Vl.\ Sigmund.
+stara_kronika.tex:306:\item[Pokladníkem a~zapisovatelem:] Josef Bárta.
+stara_kronika.tex:307:\item[Ostatní členové:] Rudolf Hill (účetní), Eduard Lazar, Adolf Bárta (rolnický syn), Alois Besta (rolnický syn), Josef Tichý, Jan Muřijovský z~Klimkovic.
+stara_kronika.tex:320:\begin{enumerate}
+stara_kronika.tex:334:\begin{itemize}
+stara_kronika.tex:350:\begin{description}
+stara_kronika.tex:351:\item[Starostou zvolen:] Josef Vilts.
+stara_kronika.tex:352:\item[Náměstkem:] Rudolf Hill.
+stara_kronika.tex:353:\item[Náčelníkem:] Adolf Sokol.
+stara_kronika.tex:354:\item[Náměstkem:] Ignác Blažej.
+stara_kronika.tex:355:\item[Jednatelem:] Vladimír Košťřica.
+stara_kronika.tex:356:\item[Ostatní členové:] Ant.\ Besta starší, Josef Tichý, Adolf Bárta, Frant.\ Buček, Josef Bárta, Ignác Blažej, Eduard Lazar.
+stara_kronika.tex:357:\item[Přehlížiteli účtů:] Fr.\ Vl.\ Sigmund, Albin Juchelka.
+stara_kronika.tex:378:\noindent Příjem celoroční \hfill 246.25~K\\
+stara_kronika.tex:379:Vydání \hfill 198.66~K\\
+stara_kronika.tex:387:\begin{itemize}
+stara_kronika.tex:405:\begin{description}
+stara_kronika.tex:406:\item[Starostou zvolen:] Josef Vilts.
+stara_kronika.tex:407:\item[Jeho náměstkem:] Adolf Bárta.
+stara_kronika.tex:408:\item[Náčelníkem:] Vladimír Košťřica.
+stara_kronika.tex:409:\item[Jednatelem:] Adolf Sokol.
+stara_kronika.tex:410:\item[Pokladníkem:] Josef Bárta.
+stara_kronika.tex:411:\item[Hospodářem:] Ignác Blažej.
+stara_kronika.tex:412:\item[Ostatní členové:] Ant.\ Besta, Josef Tichý, Eduard Lazar, Rudolf Hill, Fr.\ Vl.\ Sigmund.
+stara_kronika.tex:413:\item[Náhradníci:] Josef Ehler, Adolf Besta ml., Albin Juchelka, Jan Uhlíř.
+stara_kronika.tex:451:\begin{itemize}
+stara_kronika.tex:458:\begin{itemize}
+stara_kronika.tex:499:\begin{itemize}
+stara_kronika.tex:522:\noindent Příjem obnášel se zůstatkem z~min.\ roku \hfill 2214.86~K\\
+stara_kronika.tex:523:Vydání \hfill 1568.57~K\\
+stara_kronika.tex:528:\noindent\textbf{Soupis majetku:}\\[0.3cm]
+stara_kronika.tex:529:\begin{tabular}{lr}
+stara_kronika.tex:530:Cena budovy & 9900.---~K \\
+stara_kronika.tex:531:Cena pozemku & 906.---~K \\
+stara_kronika.tex:532:Cena vnitřního zařízení & 866.46~K \\
+stara_kronika.tex:533:Cena tělocvičného nářadí & 442.20~K \\
+stara_kronika.tex:534:Cena jeviště s~lampami & 390.---~K \\
+stara_kronika.tex:536:\textbf{Majetek jednoty} & \textbf{12\,504.66~K} \\
+stara_kronika.tex:546:\begin{itemize}
+stara_kronika.tex:562:\begin{description}
+stara_kronika.tex:563:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:564:\item[Jeho náměstkem:] Ignác Blažej.
+stara_kronika.tex:565:\item[Jednatelem:] Adolf Sokol.
+stara_kronika.tex:566:\item[Náčelníkem:] Vladimír Košťřica.
+stara_kronika.tex:567:\item[Pokladníkem:] Josef Bárta.
+stara_kronika.tex:568:\item[Ostatní členové výboru:] JUDr.\ Jaroslav Pluhař, advokát v~Bohumíně; Lev Červín, učitel v~Krásném Poli; J.\ Vl.\ Sigmund; František Blažej ml.; Ignác Bárta; Ambrož Zdražila.
+stara_kronika.tex:569:\item[Náhradníky:] Jan Dolišar, Fr.\ Blažej st., Aug.\ Lazar, Ludvík Vašíček.
+stara_kronika.tex:590:\begin{enumerate}
+stara_kronika.tex:604:\begin{itemize}
+stara_kronika.tex:619:\begin{itemize}
+stara_kronika.tex:637:\begin{description}
+stara_kronika.tex:638:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:639:\item[Jeho nám.:] Ig.\ Blažej.
+stara_kronika.tex:640:\item[Náčelníkem:] Vl.\ Košťřica.
+stara_kronika.tex:641:\item[Jeho nám.:] Ant.\ Záviš, tajemník obce Polanky.
+stara_kronika.tex:642:\item[Jednatelem:] Adolf Sokol.
+stara_kronika.tex:643:\item[Ostatní členové výboru:] Josef Bárta, Frant.\ Krejčí (stolař), Ambrož Zdražila, JUDr.\ Zar.\ Pluhař, Cyril Vejtek (zástupce pojišťovny), Emil Valder z~Pustkovce, Ferd.\ Fryčer (tajemník obce Svinova).
+stara_kronika.tex:644:\item[Náhradníky:] Ig.\ Bárta, Vincenc Martiník (naduč.\ ve Vřesině), Frant.\ Valder, Robert Valder z~Pustkovce.
+stara_kronika.tex:660:\begin{itemize}
+stara_kronika.tex:677:\begin{enumerate}
+stara_kronika.tex:692:\noindent Přijato \dotfill 856~K 68h\\
+stara_kronika.tex:693:Vydáno \dotfill 676~K 97h\\
+stara_kronika.tex:699:\begin{itemize}
+stara_kronika.tex:717:\begin{description}
+stara_kronika.tex:718:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:719:\item[Jeho nám.:] Ignát Blažej.
+stara_kronika.tex:720:\item[Náčelníkem:] Vlad.\ Košťřica.
+stara_kronika.tex:721:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:722:\item[Členy výboru:] Ignát Bárta, Adolf Sokol (pokladníkem), Dr.\ Zar.\ Pluhař, Frant.\ Krejčí, Vincenc Martiník, Ambrož Zdražila, Ludvík Dedoch (knihovníkem a~hospodářem).
+stara_kronika.tex:723:\item[Náhradníky:] Fr.\ Kudela, Val.\ Gebauer, Ferd.\ Fryčer, Tomáš Gelnar (učitel).
+stara_kronika.tex:743:\begin{itemize}
+stara_kronika.tex:754:\begin{itemize}
+stara_kronika.tex:773:\begin{itemize}
+stara_kronika.tex:780:\noindent Příjem byl \hfill 2002.79~K\\
+stara_kronika.tex:794:\begin{description}
+stara_kronika.tex:795:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:796:\item[Jeho nám.:] Ig.\ Blažej.
+stara_kronika.tex:797:\item[Náčelníkem:] Eduard Jetens.
+stara_kronika.tex:798:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:799:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:800:\item[Ostatní čl.\ výboru:] František Krejčí, Alois Petras (soustružník v~fcy Blažej), Vladimír Košťřica, Ignác Bárta, Václav Zoubek, Josef Čínek.
+stara_kronika.tex:801:\item[Náhradníky:] Ambrož Zdražila, Ludvík Dedoch, Ant.\ Bárta, Jos.\ Jirák.
+stara_kronika.tex:802:\item[Novinářem:] Ant.\ Studenský.
+stara_kronika.tex:810:\begin{itemize}
+stara_kronika.tex:820:\begin{itemize}
+stara_kronika.tex:827:\begin{itemize}
+stara_kronika.tex:844:\begin{itemize}
+stara_kronika.tex:855:\noindent Příjem roku 1905 činil \hfill 2020.50~K\\
+stara_kronika.tex:856:Vydání \hfill 1733.41~K\\
+stara_kronika.tex:862:\begin{itemize}
+stara_kronika.tex:880:\begin{description}
+stara_kronika.tex:881:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:882:\item[Jeho nám.:] Ignác Blažej.
+stara_kronika.tex:883:\item[Náčelníkem:] Eduard Jetens.
+stara_kronika.tex:884:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:885:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:886:\item[Ostatní členové:] Josef Jirák, Fr.\ Krejčí, Fr.\ Klos st., Ig.\ Bárta (hospodářem), Karel Malík, Ant.\ Bárta (perníkář).
+stara_kronika.tex:887:\item[Náhradníky:] Košťřica, Navrátil, Dedoch, Ant.\ Studenský.
+stara_kronika.tex:888:\item[Předsedou Vzděl.\ a~zábavního odboru:] Ig.\ Blažej.
+stara_kronika.tex:896:\begin{itemize}
+stara_kronika.tex:911:\begin{itemize}
+stara_kronika.tex:919:\begin{itemize}
+stara_kronika.tex:931:\noindent Příjem toho roku \hfill 2831.45~K\\
+stara_kronika.tex:932:Vydání \hfill 2525.47~K\\
+stara_kronika.tex:938:\begin{itemize}
+stara_kronika.tex:956:\begin{description}
+stara_kronika.tex:957:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:958:\item[Jeho nám.:] Ig.\ Blažej.
+stara_kronika.tex:959:\item[Náčelníkem:] Ed.\ Jetens.
+stara_kronika.tex:960:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:961:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:962:\item[Ostatní čl.:] Vl.\ Košťřica, Rudolf Buron, Josef Jirák, Ambrož Zdražila, Ignác Bárta, Antonín Bárta.
+stara_kronika.tex:963:\item[Náhradníky:] Navrátil, Krejčí, F.\ Valder, K.\ Malík.
+stara_kronika.tex:964:\item[Prohlížitelé účtů:] Ludvík Dedoch, Leop.\ Martiník.
+stara_kronika.tex:981:\begin{itemize}
+stara_kronika.tex:993:\begin{itemize}
+stara_kronika.tex:1024:\begin{itemize}
+stara_kronika.tex:1042:\begin{description}
+stara_kronika.tex:1043:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1044:\item[Jeho nám.:] Ig.\ Blažej.
+stara_kronika.tex:1045:\item[Náčelníkem:] Josef Jirák.
+stara_kronika.tex:1046:\item[Jeho nám.:] Rudolf Buron.
+stara_kronika.tex:1047:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:1048:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1049:\item[Ostatní:] Vladimír Košťřica (vyslancem do župy a~Č.O.S.), Antonín Bárta, Antonín Besta st., Jakub Halička (obchodník v~Porubě), Ambrož Zdražila.
+stara_kronika.tex:1050:\item[Náhradníky:] Ed.\ Jetens, Alois Besta, Ludvík Dedoch, Fr.\ Klos.
+stara_kronika.tex:1051:\item[Prohl.\ účtů:] Josef Vaněk, Fr.\ Novák (účetní).
+stara_kronika.tex:1063:\begin{itemize}
+stara_kronika.tex:1072:\begin{itemize}
+stara_kronika.tex:1079:\begin{itemize}
+stara_kronika.tex:1116:\begin{itemize}
+stara_kronika.tex:1134:\begin{description}
+stara_kronika.tex:1135:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1136:\item[Jeho nám.:] Ignác Blažej.
+stara_kronika.tex:1137:\item[Náčelníkem:] Josef Jirák.
+stara_kronika.tex:1138:\item[Náměstkem:] Josef Vaněk.
+stara_kronika.tex:1139:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:1140:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1141:\item[Náhradníky:] Fr.\ Navrátil, Ludvík Dedoch, Vl.\ Košťřica, Jakub Halička.
+stara_kronika.tex:1142:\item[Knihovníkem a~archivářem:] Josef Vaněk.
+stara_kronika.tex:1174:\begin{itemize}
+stara_kronika.tex:1184:\begin{itemize}
+stara_kronika.tex:1220:\begin{description}
+stara_kronika.tex:1221:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1222:\item[Jeho nám.:] Alois Besta.
+stara_kronika.tex:1223:\item[Náčelníkem:] Robert Blažej.
+stara_kronika.tex:1224:\item[Náměstkem:] Karel Klimek.
+stara_kronika.tex:1225:\item[Jednatelem:] Josef Bárta.
+stara_kronika.tex:1226:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1227:\item[Členy výboru:] Karel Vícha (učitel v~Porubě), Ant.\ Besta st., Frant.\ Navrátil, Antonín Bárta, Josef Jirák.
+stara_kronika.tex:1228:\item[Náhradníky:] Ig.\ Blažej, Ambrož Zdražila, Fr.\ Kozub, Jakub Halička.
+stara_kronika.tex:1238:\begin{itemize}
+stara_kronika.tex:1253:\begin{itemize}
+stara_kronika.tex:1277:\begin{itemize}
+stara_kronika.tex:1295:\begin{description}
+stara_kronika.tex:1296:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1297:\item[Jeho nám.:] Alois Besta.
+stara_kronika.tex:1298:\item[Náčelníkem:] Karel Klimek.
+stara_kronika.tex:1299:\item[Jeho nám.:] František Pavlíček.
+stara_kronika.tex:1300:\item[Jednatelem:] Rudolf Špaček.
+stara_kronika.tex:1301:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1302:\item[Ostatní členové:] Josef Bárta, Ig.\ Blažej, Method Zdražila, Ambrož Zdražila, Frant.\ Navrátil.
+stara_kronika.tex:1303:\item[Náhradníky:] Ant.\ Bárta, Jakub Hališka, Karel Bartek, Josef Vaněk.
+stara_kronika.tex:1304:\item[Revisory účtů:] Ant.\ Figalla (učitel v~Porubě), Fr.\ Blažej (stolař v~Porubě).
+stara_kronika.tex:1317:\begin{itemize}
+stara_kronika.tex:1340:\begin{itemize}
+stara_kronika.tex:1364:\begin{itemize}
+stara_kronika.tex:1382:\begin{description}
+stara_kronika.tex:1383:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1384:\item[Jeho nám.:] František Kozub.
+stara_kronika.tex:1385:\item[Náčelníkem:] Ant.\ Figalla, byl vyslancem do župy a~Č.O.S.
+stara_kronika.tex:1386:\item[Jeho nám.:] Václav Dvořák, stolař u~fy Blažej.
+stara_kronika.tex:1387:\item[Jednatelem:] Metoděj Zdražila, učitel ve Vřesině.
+stara_kronika.tex:1388:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1389:\item[Ostatní čl.\ výboru:] Josef Bárta, Alois Besta, Frant.\ Klos pt., Ant.\ Besta st., Jindřich Bernatsik (úředník fy Blažej).
+stara_kronika.tex:1390:\item[Náhradníky:] Ig.\ Blažej, Fr.\ Pavlíček, Fr.\ Matyáš, Arnošt Gelnar.
+stara_kronika.tex:1391:\item[Revisory účtů:] Vl.\ Košťřica a~Fr.\ Blažej.
+stara_kronika.tex:1398:\begin{itemize}
+stara_kronika.tex:1406:\begin{itemize}
+stara_kronika.tex:1424:\begin{itemize}
+stara_kronika.tex:1432:\begin{tabular}{@{}lrr@{}}
+stara_kronika.tex:1433:8.4.\ hrána v~sokolovně \emph{Maryša} & hrubý příjem 80~K & čistý 56~K \\
+stara_kronika.tex:1434:21.4.\ opakována u~Švidrnochů & 76~K & 52~K \\
+stara_kronika.tex:1435:6.5.\ hrán \emph{Diblík, čertík z~hor} & 50~K & 25~K \\
+stara_kronika.tex:1436:27./10.\ hráno drama \emph{Karel Modrava} & 63~K & 48~K \\
+stara_kronika.tex:1437:Mikulášská zábava & & 46~K \\
+stara_kronika.tex:1438:Sylvestrovská zábava & & 53~K \\
+stara_kronika.tex:1460:\begin{description}
+stara_kronika.tex:1461:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1462:\item[Náměstkem:] Alois Besta.
+stara_kronika.tex:1463:\item[Náčelníkem:] Frant.\ Pavlíček (nově přistoupil).
+stara_kronika.tex:1464:\item[Jednatelem:] František Šedivý, učitel v~Porubě.
+stara_kronika.tex:1465:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1466:\item[Ostatní čl.\ výb.:] Ignác Blažej, Fr.\ Kozub, Josif Bárta, Ant.\ Figalla, Václav Dvořák, Gustav Kořený (který byl zvolen vzdělávatelem a~vyslancem do župy i~Č.O.S.).
+stara_kronika.tex:1467:\item[Náhradníci:] Ant.\ Bárta, Fr.\ Navrátil.
+stara_kronika.tex:1474:\begin{itemize}
+stara_kronika.tex:1490:\begin{itemize}
+stara_kronika.tex:1508:\begin{novinovy-vystrizek}
+stara_kronika.tex:1541:\begin{description}
+stara_kronika.tex:1542:\item[Starostou:] Alois Besta.
+stara_kronika.tex:1543:\item[Jeho nám.:] Adolf Bárta.
+stara_kronika.tex:1544:\item[Náčelníkem:] Ant.\ Figalla.
+stara_kronika.tex:1545:\item[Jednatelem:] Fr.\ Šedivý.
+stara_kronika.tex:1546:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1547:\item[Ostatní čl.\ výboru:] Fr.\ Kozub, Josef Bartek, Fr.\ Pavlíček, Václav Dvořák, Eda Jirák, Robert Blažej.
+stara_kronika.tex:1548:\item[Vzdělavatelem:] Josef Bárta.
+stara_kronika.tex:1549:\item[Knihovníkem:] Václav Dvořák.
+stara_kronika.tex:1568:\begin{itemize}
+stara_kronika.tex:1594:\begin{tabular}{@{}lr@{\hspace{2cm}}lr@{}}
+stara_kronika.tex:1595:\multicolumn{2}{c}{\textbf{Aktiva}} & \multicolumn{2}{c}{\textbf{Passiva}} \\
+stara_kronika.tex:1596:Pokladní hotovost & 58.69~K & Obč.\ zál.\ v~Klimkovicích & 6\,000.---~K \\
+stara_kronika.tex:1597:Závodní podíly u~Obč.\ záložny v~Klimk. & 300.---~K & Obč.\ zál.\ v~Porubě & 10\,709.17~K \\
+stara_kronika.tex:1598:Záv.\ pod.\ u~Obč.\ zál.\ v~Třebovici & 100.---~K & Obč.\ zál.\ v~Porubě & 1\,500.---~K \\
+stara_kronika.tex:1599:Na běžném účtu u~Obč.\ zál.\ v~Porubě & 161.52~K & Ad.\ Bártovi & 2\,889.---~K \\
+stara_kronika.tex:1600:Hodnota nemovitosti & 21\,281.93~K & Členské Obci Sokolské & 1\,500.---~K \\
+stara_kronika.tex:1601:Hodnota inventáře & 1\,482.---~K & Úroky Ad.\ Bártovi & 194.40~K \\
+stara_kronika.tex:1602:U~Fr.\ Míky & 1.15~K & Zed.\ mistru Hrubešovi & 56.20~K \\
+stara_kronika.tex:1603:U~Jos.\ Lazara & 300.49~K & & \\
+stara_kronika.tex:1604:\textbf{Celkem} & \textbf{23\,685.78~K} & \textbf{Celkem} & \textbf{22\,839.77~K} \\
+stara_kronika.tex:1622:\begin{description}
+stara_kronika.tex:1623:\item[Starostou:] Ant.\ Besta, starší.
+stara_kronika.tex:1624:\item[Jeho nám.:] František Kozub.
+stara_kronika.tex:1625:\item[Náčelníkem:] Ant.\ Figalla.
+stara_kronika.tex:1626:\item[Jednatelem:] Josef Bartek.
+stara_kronika.tex:1627:\item[Pokladníkem:] Adolf Sokol.
+stara_kronika.tex:1628:\item[Ostatní čl.\ výb.:] Adolf Bárta, Josef Bárta, Richard Heinrich (učitel v~Porubě), Alois Besta, Ambrož Zdražila, Frant.\ Klos pt.
+stara_kronika.tex:1629:\item[Náhradníky:] Fr.\ Valder, Cyril Dostál, Fr.\ Pavlíček, Ludvík Kos.
+stara_kronika.tex:1630:\item[Vzdělavatelem:] Josef Bárta.
+stara_kronika.tex:1656:\begin{itemize}
+stara_kronika.tex:1684:\begin{description}
+stara_kronika.tex:1685:\item[Starostou:] Antonín Besta st.
+stara_kronika.tex:1686:\item[Náměstkem:] Frant.\ Kozub.
+stara_kronika.tex:1687:\item[Náčelníkem:] František Besta, zámečník.
+stara_kronika.tex:1688:\item[Členy výboru:] Miloslava Bártová (jednatelkou), Cyril Dostál (pokladníkem), Josef Bárta (vzdělávatelem), Adolf Bárta (hospodářem), Adolf Sokol, Alois Besta, Frant.\ Klos, Frant.\ Pavlíček.
+stara_kronika.tex:1689:\item[Náhradníky:] Fr.\ Valder, Ludvík Kos, Marie Motýlová, Herma Kysková (knihovníkem).
+stara_kronika.tex:1690:\item[Vyslancem do župy:] Fr.\ Besta.
+stara_kronika.tex:1700:\begin{itemize}
+stara_kronika.tex:1731:\begin{itemize}
+stara_kronika.tex:1742:\begin{itemize}
+stara_kronika.tex:1755:\begin{itemize}
+stara_kronika.tex:1773:\begin{description}
+stara_kronika.tex:1774:\item[Starostou:] Antonín Besta, st.
+stara_kronika.tex:1775:\item[Náměstkem:] Adolf Bárta.
+stara_kronika.tex:1776:\item[Náčelníkem:] Frant.\ Besta.
+stara_kronika.tex:1777:\item[Jednatelem:] Josef Bartek.
+stara_kronika.tex:1778:\item[Pokladníkem:] Ludvík Dedoch.
+stara_kronika.tex:1779:\item[Ostatní:] Adolf Sokol, Josef Bárta, Alois Besta, Frant.\ Klos pt., Frant.\ Valder.
+stara_kronika.tex:1780:\item[Náhradníky:] Fr.\ Klos ml., Fr.\ Pavlíček, Marie Motýlová, Herma Kysková.
+stara_kronika.tex:1781:\item[Vyslancem do župy:] Adolf Sokol a~Fr.\ Besta.
+stara_kronika.tex:1790:\begin{itemize}
+stara_kronika.tex:1848:\begin{itemize}
+stara_kronika.tex:1866:\begin{description}
+stara_kronika.tex:1867:\item[Starostou:] Ant.\ Besta, st.
+stara_kronika.tex:1868:\item[Náměstkem:] Adolf Bárta.
+stara_kronika.tex:1869:\item[Náčelníkem:] Frant.\ Besta.
+stara_kronika.tex:1870:\item[Náčelnicí:] Slávka Bártová.
+stara_kronika.tex:1871:\item[Jednatelem:] Josef Bartek.
+stara_kronika.tex:1872:\item[Pokladníkem:] Běta Chlebková.
+stara_kronika.tex:1873:\item[Ostatní:] Ignác Blažej, Josef Bárta, Fr.\ Klos ml., Fr.\ Pavlíček, Karel Klimek, Alba Elötygrová.
+stara_kronika.tex:1874:\item[Náhradníky:] Emil Mika, Bohuš Bárta, Fr.\ Valder, Leop.\ Martiník.
+stara_kronika.tex:1875:\item[Prohlížitelé účtů:] Frant.\ Kozub, Alois Besta.
+stara_kronika.tex:1876:\item[Vzdělavatelem:] Adolf Sokol a~Anna Bártková.
+stara_kronika.tex:1877:\item[Knihovníkem:] Herma Kysková.
+stara_kronika.tex:1878:\item[Hospodářem:] Ant.\ Bárta.
+stara_kronika.tex:1879:\item[Zástupci do župy:] Fr.\ Pavlíček, Fr.\ Besta ml.
+stara_kronika.tex:1880:\item[Zástupci do Č.O.S.:] Ant.\ Figalla, Adolf Sokol.
+stara_kronika.tex:1884:\begin{itemize}
+stara_kronika.tex:1899:\begin{itemize}
+stara_kronika.tex:1972:\begin{enumerate}
+stara_kronika.tex:1991:\begin{description}
+stara_kronika.tex:1992:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:1993:\item[Náměstkem:] František Kozub.
+stara_kronika.tex:1994:\item[Náčelníkem:] František Jirák (25.~února zvolen br.\ František Besta).
+stara_kronika.tex:1995:\item[Náměstkem:] František Besta (25.~února zvolen br.\ Antonín Klos).
+stara_kronika.tex:1996:\item[Náčelnicí:] Běta Chlebková.
+stara_kronika.tex:1997:\item[Místonáčelnicí:] Alba Elötygrová.
+stara_kronika.tex:1998:\item[Jednatelem:] Josef Bartek.
+stara_kronika.tex:1999:\item[Pokladníkem:] Antonín Figalla.
+stara_kronika.tex:2000:\item[Ostatní:] Ignác Blažej, Alois Besta, Josef Bárta, Antonín Bárta, Antonín Klos ml., Jan Kopřiva.
+stara_kronika.tex:2001:\item[Náhradníky:] Ludvík Kočí, Adolf Valder, Emil Mika, František Krejčí.
+stara_kronika.tex:2002:\item[Vzdělavatelé:] Antonín Figalla, Josef Hurník (učitelé).
+stara_kronika.tex:2003:\item[Režisér:] Alois Petras.
+stara_kronika.tex:2004:\item[Knihovnicí:] Herma Lysková.
+stara_kronika.tex:2005:\item[Vyslancem do župy:] František Jirák.
+stara_kronika.tex:2006:\item[Vyslancem do Č.O.S.:] Antonín Figalla.
+stara_kronika.tex:2007:\item[Hospodářem:] Antonín Bárta.
+stara_kronika.tex:2008:\item[Revisory účtů:] Teofil Pivoň, František Kudela.
+stara_kronika.tex:2012:\begin{enumerate}
+stara_kronika.tex:2031:\begin{enumerate}
+stara_kronika.tex:2043:\begin{enumerate}
+stara_kronika.tex:2058:\noindent Hrubý příjem činil \hfill 6\,899~Kč 70~h\\
+stara_kronika.tex:2059:Vydání \hfill 3\,237~Kč 10~h\\
+stara_kronika.tex:2084:\noindent Novostavba malého sálu a~šatny stála \hfill 57\,994.18~Kč\\
+stara_kronika.tex:2085:Oprava starých budov \hfill 15\,891.11~Kč\\
+stara_kronika.tex:2086:Úprava zahrady \hfill 995.---~Kč\\
+stara_kronika.tex:2108:\begin{enumerate}
+stara_kronika.tex:2132:\noindent Počet členstva:\\
+stara_kronika.tex:2133:Mužů 55, sester 13 = 68.\\
+stara_kronika.tex:2134:Dorostenců 18, dorostenek 9 = 27.\\
+stara_kronika.tex:2148:\begin{description}
+stara_kronika.tex:2149:\item[Starostou:] Adolf Bárta, náměstkem: František Kozub.
+stara_kronika.tex:2150:\item[Náčelníkem:] František Jirák, náčelnicí: Vlasta Blažejová.
+stara_kronika.tex:2151:\item[Jednatelem:] František Šedivý.
+stara_kronika.tex:2152:\item[Pokladníkem:] Josef Vavrečka, učitel (po jeho odchodu do Perného: Adolf Valder).
+stara_kronika.tex:2153:\item[Ostatní členové výboru:] Ignác Blažej, Josef Bárta, František Besta, Oldřich Studenský, Alba Bestová (dříve Elötygrová).
+stara_kronika.tex:2154:\item[Náhradníci:] Adolf Valder, František Pospíšil, Donát Grünbaum st., Emil Mika.
+stara_kronika.tex:2155:\item[Revisoři účtů:] Eda Jirák a~Jan Kopřiva.
+stara_kronika.tex:2156:\item[Vzdělavatel:] Josef Hurník.
+stara_kronika.tex:2157:\item[Hospodář:] Antonín Figalla.
+stara_kronika.tex:2158:\item[Knihovnicí:] Herma Lysková.
+stara_kronika.tex:2159:\item[Vyslancem do Č.O.S.:] Ignác Blažej.
+stara_kronika.tex:2160:\item[Vyslancem do župy:] František Jirák.
+stara_kronika.tex:2181:\begin{itemize}
+stara_kronika.tex:2219:\begin{enumerate}
+stara_kronika.tex:2232:\begin{itemize}
+stara_kronika.tex:2241:\begin{itemize}
+stara_kronika.tex:2261:\noindent Zpráva pokladní:\\
+stara_kronika.tex:2262:Příjem za rok 1921 činil 3\,268.20~Kč\\
+stara_kronika.tex:2269:\noindent Stav členstva na konci roku:\\
+stara_kronika.tex:2283:\begin{description}
+stara_kronika.tex:2284:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:2285:\item[Náměstkem:] František Kozub.
+stara_kronika.tex:2286:\item[Náčelníkem:] František Klos.
+stara_kronika.tex:2287:\item[Náčelnicí:] Božena Blažejová.
+stara_kronika.tex:2288:\item[Jednatelem:] František Jirák.
+stara_kronika.tex:2289:\item[Pokladníkem:] Donát Grünbaum.
+stara_kronika.tex:2290:\item[Vzdělavatelem:] Josef Hurník.
+stara_kronika.tex:2291:\item[Další členové výboru:] František Šedivý (matrikářem), František Besta (hospodářem), Vladimír Košťřica, Ignác Blažej, Adolf Valder, Antonín Klos.
+stara_kronika.tex:2292:\item[Náhradníky:] Antonín Hrbáč (zvolen také zapisovatelem), Alois Besta, Miloslava Hurníková, Eduard Jirák.
+stara_kronika.tex:2293:\item[Revisoři účtů:] Jindřich Legerský, Alois Petras.
+stara_kronika.tex:2294:\item[Režisérem:] Leoš Grünbaum (také knihovníkem).
+stara_kronika.tex:2295:\item[Vyslanci do župy:] František Šedivý.
+stara_kronika.tex:2296:\item[Vyslanci do Č.O.S.:] Ignác Blažej.
+stara_kronika.tex:2306:\begin{quote}
+stara_kronika.tex:2347:\begin{itemize}
+stara_kronika.tex:2359:\begin{itemize}
+stara_kronika.tex:2374:\begin{itemize}
+stara_kronika.tex:2405:\begin{description}
+stara_kronika.tex:2406:\item[Jednatelem:] Vladimír Košťřica.
+stara_kronika.tex:2407:\item[Pokladníkem:] Donát Grünbaum ml.\ (účetní).
+stara_kronika.tex:2408:\item[Vzdělavatelem:] Antonín Figalla.
+stara_kronika.tex:2409:\item[Knihovníkem a~archivářem:] Josef Hurník.
+stara_kronika.tex:2410:\item[Kronikářem:] Josef Bárta.
+stara_kronika.tex:2411:\item[Matrikářem:] František Šedivý.
+stara_kronika.tex:2412:\item[Přísedící:] Ignác Blažej, Leoš Grünbaum, Rudolf Sladký.
+stara_kronika.tex:2413:\item[Náhradníky:] Oldřiška Kozubová, Emil Mika, Arnošt Kozák, Alois Petras.
+stara_kronika.tex:2414:\item[Hospodářskými dozorci:] Otakar Bárta, Donát Grünbaum st., Adolf Valder.
+stara_kronika.tex:2415:\item[Do rozhodčího soudu:] Vladimír Košťřica, Antonín Bárta, Josef Bárta, Ignác Blažej.
+stara_kronika.tex:2416:\item[Vyslanci do župy a~do Č.O.S.:] František Šedivý a~Ignác Blažej.
+stara_kronika.tex:2440:\begin{itemize}
+stara_kronika.tex:2463:\begin{itemize}
+stara_kronika.tex:2478:\begin{enumerate}
+stara_kronika.tex:2520:\begin{description}
+stara_kronika.tex:2521:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:2522:\item[Náměstkem:] František Kozub.
+stara_kronika.tex:2523:\item[Náčelníkem:] Eda Jirák.
+stara_kronika.tex:2524:\item[Náčelnicí:] Anna Grünbaumová.
+stara_kronika.tex:2525:\item[Jednatelem:] Antonín Figalla.
+stara_kronika.tex:2526:\item[Vzdělavatelem:] František Šedivý.
+stara_kronika.tex:2527:\item[Pokladníkem:] Donát Grünbaum ml.
+stara_kronika.tex:2528:\item[Knihovníkem a~archivářem:] Josef Hurník.
+stara_kronika.tex:2529:\item[Ostatní členové výboru:] Antonín Klos (mlynář), Arnošt Kozák, František Jirák, Vlasta Blažejová, Josef Bárta.
+stara_kronika.tex:2530:\item[Náhradníky:] Jarmila Sokolová, Rudolf Buron, Alois Petras, František Besta.
+stara_kronika.tex:2531:\item[Režisérem divadla:] Miloslava Hurníková.
+stara_kronika.tex:2532:\item[Vyslanci do župy:] Adolf Valder a~Fr.\ Besta.
+stara_kronika.tex:2533:\item[Vyslanci do Č.O.S.:] Josef Hurník a~Eda Jirák.
+stara_kronika.tex:2534:\item[Revisory účtů:] Josef Bartek a~Ludvík Kočí.
+stara_kronika.tex:2535:\item[Do smírčího soudu:] Ig.\ Blažej, Jos.\ Bárta, Fr.\ Kozub, Alois Besta a~Jarmila Sokolová.
+stara_kronika.tex:2571:\begin{itemize}
+stara_kronika.tex:2582:\begin{enumerate}
+stara_kronika.tex:2605:\begin{novinovy-vystrizek}
+stara_kronika.tex:2615:\noindent\textbf{Stav členstva 31.~prosince 1924:}\\
+stara_kronika.tex:2616:Mateřská jednota Poruba: muži 45, žen 9.\\
+stara_kronika.tex:2617:Pobočka Vřesina: muži 25, žen 5.\\
+stara_kronika.tex:2631:\begin{description}
+stara_kronika.tex:2632:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:2633:\item[Náměstkem:] František Kozub.
+stara_kronika.tex:2634:\item[Náčelníkem:] Eda Jirák, náměstkem Franta Jirák.
+stara_kronika.tex:2635:\item[Náčelnicí:] Herma Lysková, vedoucí dorostenek Slávka Lazarová, vedoucí žen Alba Bestová.
+stara_kronika.tex:2636:\item[Vzdělavatelem:] František Šedivý.
+stara_kronika.tex:2637:\item[Členové výboru:] Antonín Figalla (jednatel), Adolf Valder, Frant.\ Jirák, Mojmír Bárta, Antonín Klos, Josef Hurník, Frant.\ Besta, Marie Pivoňová.
+stara_kronika.tex:2638:\item[Náhradníky:] Teofil Pivoň, Ant.\ Práta, Rudolf Sladký, Emil Mika.
+stara_kronika.tex:2639:\item[Režisér divadla:] Rudolf Sladký.
+stara_kronika.tex:2648:\begin{itemize}
+stara_kronika.tex:2666:\begin{enumerate}
+stara_kronika.tex:2692:\noindent\textbf{Stav členstva:}\\
+stara_kronika.tex:2693:Jednota Poruba: 52~mužů, 14~žen.\\
+stara_kronika.tex:2694:Pobočka Vřesina: 25~mužů, 5~žen.\\
+stara_kronika.tex:2708:\begin{description}
+stara_kronika.tex:2709:\item[Starostou:] Adolf Bárta.
+stara_kronika.tex:2710:\item[Náměstkem:] František Kozub.
+stara_kronika.tex:2711:\item[Náčelníkem:] František Jirák.
+stara_kronika.tex:2712:\item[Náčelnicí:] Vlasta Blažejová.
+stara_kronika.tex:2713:\item[Vzdělavatelem:] František Šedivý.
+stara_kronika.tex:2714:\item[Do výboru:] Ruda Sladký, Mojmír Bárta, Leoš Grünbaum, Adolf Švidrnoch, Ant.\ Figalla, Miloslava Hurníková, Rudolf Buron, Frant.\ Besta.
+stara_kronika.tex:2715:\item[Náhradníky:] Josef Petras, Tonda Klos, Miloslav Kozub, Miloslava Lazarová.
+stara_kronika.tex:2716:\item[Režiséři:] Leoš Grünbaum, Miloslava Hurníková, Ruda Sladký.
+stara_kronika.tex:2717:\item[Vyslanci do župy:] Ant.\ Klos, Adolf Valder.
+stara_kronika.tex:2718:\item[Revisoři:] Arnošt Osladil, Břetislav Blažej.
+stara_kronika.tex:2719:\item[Jednatelem:] Ant.\ Figalla.
+stara_kronika.tex:2720:\item[Zapisovatelem:] Adolf Švidrnoch.
+stara_kronika.tex:2721:\item[Pokladníkem:] Miloslav Kozub.
+stara_kronika.tex:2722:\item[Matrikářem:] Frant.\ Šedivý.
+stara_kronika.tex:2723:\item[Hospodářem:] Ruda Sladký.
+stara_kronika.tex:2724:\item[Archivářem:] Leoš Grünbaum.
+stara_kronika.tex:2748:\begin{itemize}
+stara_kronika.tex:2758:\begin{enumerate}
+stara_kronika.tex:2783:\begin{verse}
+stara_kronika.tex:2784:Po dlouhé a~tuhé zimě přišlo jaro k~nám,\\
+stara_kronika.tex:2785:skřivan s~jásotem se vznáší k~nebes výšinám,\\
+stara_kronika.tex:2786:písní jeho probouzí se zvolna spící kraj,\\
+stara_kronika.tex:2787:brzy zapestří se květy zahrada i~háj.\\
+stara_kronika.tex:2788:Letos máme radost větší jako jiný krát,\\
+stara_kronika.tex:2789:poněvadž dnes můžem bratru svému blahopřát;\\
+stara_kronika.tex:2790:bratru milému nad jiné, každý z~nás to ví,\\
+stara_kronika.tex:2791:jakou láskou všichni lneme k~bratru Bártovi,\\
+stara_kronika.tex:2792:který dvacet let už stojí v~čele jednoty,\\
+stara_kronika.tex:2793:prožívá s~ní doby štěstí, též i~trampoty;\\
+stara_kronika.tex:2794:blahu jejímu vždy dával zdraví, statky, čas,\\
+stara_kronika.tex:2795:na něho se obracíme s~důvěrou vždy zas.\\
+stara_kronika.tex:2796:Sešli se dnes za něho dorost, bratři Sokoli,\\
+stara_kronika.tex:2797:že je váženým a~ctěným v~celém okolí,\\
+stara_kronika.tex:2798:že se dožil padesátky v~plné svěžesti\\
+stara_kronika.tex:2799:a~že má dva velké dary: zdraví a~štěstí.\\
+stara_kronika.tex:2800:Proto v~dnešní významný den pozvedáme hlas:\\
+stara_kronika.tex:2814:\noindent\textbf{Stav členstva:}\\
+stara_kronika.tex:2815:Jednota Poruba: 53~mužů, 18~žen.\\
+stara_kronika.tex:2816:Pobočka Vřesina: 16~mužů.\\
+stara_kronika.tex:2830:\begin{description}
+stara_kronika.tex:2831:\item[Starostou:] František Šedivý, učitel.
+stara_kronika.tex:2832:\item[Náměstkem:] Rudolf Buron, dělník.
+stara_kronika.tex:2833:\item[Náčelníkem:] Karel Klos.
+stara_kronika.tex:2834:\item[Náčelnicí:] Anna Lazarová.
+stara_kronika.tex:2835:\item[Vzdělavatelem:] Frant.\ Mrázek, učitel ve Svinově.
+stara_kronika.tex:2836:\item[Do výboru:] Josef Hurník, uč., Frant.\ Besta, zámečník, Herma Kubalová, Miloslav Kozub, Leoš Grünbaum, Eda Jirák, Teofil Pivoň, Ruda Sladký.
+stara_kronika.tex:2837:\item[Náhradníky:] Antonín Figalla, Antonín Klos, Milada Kozubová, Adolf Valder.
+stara_kronika.tex:2838:\item[Vyslanci do župy:] jednatel a~náčelník.
+stara_kronika.tex:2839:\item[Revisory účtů:] Adolf Švidrnoch, Adolf Valder.
+stara_kronika.tex:2840:\item[Archivářem:] Leoš Grünbaum.
+stara_kronika.tex:2844:\begin{description}
+stara_kronika.tex:2845:\item[Jednatelem:] Ant.\ Figalla.
+stara_kronika.tex:2846:\item[Pokladníkem:] Miloslav Kozub.
+stara_kronika.tex:2847:\item[Hospodářem:] Rudolf Buron (též novinářem).
+stara_kronika.tex:2848:\item[Matrikářem:] Fr.\ Šedivý.
+stara_kronika.tex:2849:\item[Archivářem:] Leoš Grünbaum (též knihovníkem).
+stara_kronika.tex:2858:\begin{itemize}
+stara_kronika.tex:2871:\begin{verse}
+stara_kronika.tex:2872:\textit{Svinovskému Sokolu:}\\[0.5em]
+stara_kronika.tex:2873:Nadšení a~vytrvalost,\\
+stara_kronika.tex:2874:již jste dosud projevili,\\
+stara_kronika.tex:2875:dovede Vás, bratři i~sestry,\\
+stara_kronika.tex:2876:jistě k~vytyčenému cíli.\\
+stara_kronika.tex:2877:Až pak v~nové sokolovně\\
+stara_kronika.tex:2878:sejdete se k~nové práci,\\
+stara_kronika.tex:2879:ať Vám Vaši obětavost\\
+stara_kronika.tex:2880:Osud plným zdarem splácí.\\[0.5em]
+stara_kronika.tex:2881:\hfill (J.~B.)\\
+stara_kronika.tex:2901:\begin{itemize}
+stara_kronika.tex:2917:\begin{enumerate}
+stara_kronika.tex:2946:\begin{novinovy-vystrizek}
+stara_kronika.tex:2955:\begin{verse}
+stara_kronika.tex:2956:V~srdcích našich zvučí teskná melodie,\\
+stara_kronika.tex:2957:že Tě, drahý bratře, černá zem již kryje,\\
+stara_kronika.tex:2958:zarmoutils nás všechny, Tonečku náš drahý,\\
+stara_kronika.tex:2969:\noindent\textbf{Stav členstva 31.~prosince 1927:}\\
+stara_kronika.tex:2970:Poruba: 58~mužů, 18~žen.\\
+stara_kronika.tex:2971:Pobočka Vřesina: 14~mužů.\\
+stara_kronika.tex:2987:\begin{description}
+stara_kronika.tex:2988:\item[Starostou:] Fr.\ Šedivý.
+stara_kronika.tex:2989:\item[Místostarostou:] František Kozub.
+stara_kronika.tex:2990:\item[Náčelníkem:] František Mika.
+stara_kronika.tex:2991:\item[Náčelnicí:] Milada Kozubová.
+stara_kronika.tex:2992:\item[Vzdělavatelem:] Frant.\ Mrázek.
+stara_kronika.tex:2993:\item[Jednatelem:] Ant.\ Figalla.
+stara_kronika.tex:2994:\item[Pokladníkem:] Vladimír Blažej.
+stara_kronika.tex:2995:\item[Režisérem:] Arnošt Osladil.
+stara_kronika.tex:2996:\item[Ostatní členové výboru:] Josef Hurník, Adolf Valder, Ant.\ Klos, Bohuš Bárta, Sláva Lazarová.
+stara_kronika.tex:2997:\item[Náhradníky:] Rudolf Buron, Emil Mika, Adolf Švidrnoch, Marie Pivoňová.
+stara_kronika.tex:2998:\item[Revisory účtů:] Donát Grünbaum ml.\ a~Adolf Valder.
+stara_kronika.tex:2999:\item[Vyslancem do župy a~kronikářem:] Josef Bárta.
+stara_kronika.tex:3000:\item[Matrikářem:] Fr.\ Šedivý.
+stara_kronika.tex:3001:\item[Do smírčího soudu:] Jos.\ Bárta, Ig.\ Blažej, Adolf Bárta, Donát Grünbaum st., Fr.\ Klos st.\ a~náčelník F.\ Mika.
+stara_kronika.tex:3016:\begin{enumerate}
+stara_kronika.tex:3060:\begin{itemize}
+stara_kronika.tex:3071:\begin{enumerate}
+stara_kronika.tex:3086:\begin{novinovy-vystrizek}
+stara_kronika.tex:3110:\begin{quote}
+stara_kronika.tex:3113:\begin{verse}
+stara_kronika.tex:3114:Kdo své vlasti slouží, práva její hájí,\\
+stara_kronika.tex:3115:K~tomu dobří lidé úctu, lásku mají.\\
+stara_kronika.tex:3116:Že ze spolků Sokol nejvíc pro vlast dělá,\\
+stara_kronika.tex:3117:o~tom přesvědčena veřejnost je celá.\\
+stara_kronika.tex:3118:I~Vy Sokolu jste mnoho věnovali,\\
+stara_kronika.tex:3119:Svou obětavostí mnohým příklad dali.\\
+stara_kronika.tex:3120:Na pozemku Vašem sokolovna stojí,\\
+stara_kronika.tex:3121:do ní přicházíme jako k~máti svojí.\\
+stara_kronika.tex:3122:Nalezne v~ní každý, po čem srdce touží,\\
+stara_kronika.tex:3123:zdraví zachová si, život si prodlouží.\\
+stara_kronika.tex:3124:Dokud sokolovna naše bude státi,\\
+stara_kronika.tex:3140:\noindent\textbf{Stav členstva 31.~prosince 1928:}\\
+stara_kronika.tex:3141:Poruba: 68~mužů, 20~žen.\\
+stara_kronika.tex:3142:Vřesina: 29~mužů.\\
+stara_kronika.tex:3157:\begin{description}
+stara_kronika.tex:3158:\item[Starostou:] František Kozub.
+stara_kronika.tex:3159:\item[Místostarostou:] Josef Bárta.
+stara_kronika.tex:3160:\item[Náčelníkem:] Antonín Klos.
+stara_kronika.tex:3161:\item[Náčelnicí:] Milada Kozubová.
+stara_kronika.tex:3162:\item[Vzdělavatelem:] Leoš Grünbaum.
+stara_kronika.tex:3163:\item[Jednatelem:] Josef Hurník.
+stara_kronika.tex:3164:\item[Pokladníkem:] Ant.\ Figalla.
+stara_kronika.tex:3165:\item[Archivářem:] Leoš Grünbaum.
+stara_kronika.tex:3166:\item[Matrikářem:] Adolf Valder.
+stara_kronika.tex:3167:\item[Hospodářem a~novinářem:] Rudolf Buron.
+stara_kronika.tex:3168:\item[Režisérem:] Josef Bárta.
+stara_kronika.tex:3169:\item[Zapisovateli:] Vladimír Blažej a~Inoš Osladil.
+stara_kronika.tex:3170:\item[Členy bez funkce:] Marie Pivoňová a~Martin Bichler.
+stara_kronika.tex:3171:\item[Revisoři účtů:] Karel Klos, Miloslav Kozub.
+stara_kronika.tex:3172:\item[Náhradníky:] Alois Petras, Fr.\ Pavlíček, Bohuš Bárta, Emil Mika.
+stara_kronika.tex:3173:\item[Zdravotníkem:] Frant.\ Mrázek.
+stara_kronika.tex:3174:\item[Do smírčího soudu:] Jos.\ Bárta, Ad.\ Bárta, Ig.\ Blažej, Donát Grünbaum st., Fr.\ Klos st.
+stara_kronika.tex:3198:\begin{itemize}
+stara_kronika.tex:3215:\begin{enumerate}
+stara_kronika.tex:3245:\begin{enumerate}
+stara_kronika.tex:3253:\begin{novinovy-vystrizek}
+stara_kronika.tex:3261:\noindent\textbf{Stav členstva koncem roku 1929:}\\
+stara_kronika.tex:3262:V~Porubě: 67~mužů, 20~žen.\\
+stara_kronika.tex:3263:V~pobočce Vřesina: 35~mužů, 5~žen.\\
+stara_kronika.tex:3278:\begin{description}
+stara_kronika.tex:3279:\item[Starostou:] Josef Bárta.
+stara_kronika.tex:3280:\item[Jeho náměstkem:] František Kozub.
+stara_kronika.tex:3281:\item[Náčelníkem:] Vratislav Blažej.
+stara_kronika.tex:3282:\item[Náčelnicí:] Milada Kozubová.
+stara_kronika.tex:3283:\item[Jednatelem:] Adolf Švidernoch.
+stara_kronika.tex:3284:\item[Pokladníkem:] Ant.\ Figalla.
+stara_kronika.tex:3285:\item[Vzdělavatelem:] Josef Bárta.
+stara_kronika.tex:3286:\item[Matrikářem:] Otakar Schindler.
+stara_kronika.tex:3287:\item[Režisérem:] Inoš Osladil.
+stara_kronika.tex:3288:\item[Ostatní členové:] Josef Hurník, Ant.\ Krejčí, Bohuš Bárta, Vláďa Blažej.
+stara_kronika.tex:3289:\item[Náhradníci:] Bohumil Chvíla (novinářem), Rudolf Buron (hospodářem), Adolf Valder, Břetislav Zdražila.
+stara_kronika.tex:3290:\item[Revisoři účtů:] Miloslav Kozub, Karel Klos.
+stara_kronika.tex:3291:\item[Smírčí soud:] Adolf Bárta, Ing.\ Marx, Frant.\ Kozub, Frant.\ Klos st., Miloslava Hurníková.
+stara_kronika.tex:3292:\item[Zapisovatelem:] Zdeněk Janíček.
+stara_kronika.tex:3327:\begin{itemize}
+stara_kronika.tex:3341:\begin{enumerate}
+stara_kronika.tex:3360:\begin{enumerate}
+stara_kronika.tex:3392:\begin{novinovy-vystrizek}
+stara_kronika.tex:3421:\begin{description}
+stara_kronika.tex:3422:\item[Starostou:] František Kozub.
+stara_kronika.tex:3423:\item[I.~náměstkem:] Eduard Jirák.
+stara_kronika.tex:3424:\item[II.~náměstkem:] Josef Bárta.
+stara_kronika.tex:3425:\item[Jednatelem:] Miroslav Kalus.
+stara_kronika.tex:3426:\item[Náčelníkem:] Isidor Mika.
+stara_kronika.tex:3427:\item[Náčelnicí:] Milada Kozubová.
+stara_kronika.tex:3428:\item[Pokladníkem:] Antonín Figalla.
+stara_kronika.tex:3429:\item[Výběrčím:] Bedřich Konečný.
+stara_kronika.tex:3430:\item[Matrikářem:] Otokar Schindler.
+stara_kronika.tex:3431:\item[Režisérem a~zapisovatelem:] Inoš Osladil.
+stara_kronika.tex:3432:\item[Vzdělavatelem:] Josef Konečný.
+stara_kronika.tex:3433:\item[Hospodářem:] Rudolf Buron.
+stara_kronika.tex:3434:\item[Kronikářem:] Josef Bárta.
+stara_kronika.tex:3435:\item[Archivářem:] František Pavlíček.
+stara_kronika.tex:3436:\item[Účetní dozorci:] Čeněk Konečný a~Miloslav Kozub.
+stara_kronika.tex:3437:\item[Zástupci do župy:] Josef Bárta a~Adolf Valder.
+stara_kronika.tex:3438:\item[Členy výboru:] Lida Bestová, Ludvík Šimko, Antonín Krejčí, Bohuš Bárta.
+stara_kronika.tex:3439:\item[Smírčí soud:] Frant.\ Kozub, Jirák Eda, Bárta Josef, Kozubová Milada, Mika Isidor.
+stara_kronika.tex:3492:\begin{enumerate}
+stara_kronika.tex:3506:\noindent V~Porubě 19.~února 1934\\
+stara_kronika.tex:3507:\textbf{Otakar Schindler}\\
+stara_kronika.tex:3520:\begin{description}
+stara_kronika.tex:3521:\item[Starostou:] František Kozub, rolník v~Porubě.
+stara_kronika.tex:3522:\item[Nám.\ starosty:] František Klos st., mlynář v~Porubě.
+stara_kronika.tex:3523:\item[Nám.\ starosty:] Jiřina Grünbaumová, choť správce tov.\ v~Porubě.
+stara_kronika.tex:3524:\item[Náčelníkem:] Miroslav Besta, zámečník v~Porubě.
+stara_kronika.tex:3525:\item[Náčelnicí:] Milada Kozubová, dcera Fr.\ Kozuba.
+stara_kronika.tex:3526:\item[Vzdělavatelem:] Josef Konečný, oficiál st.\ drah v~Porubě.
+stara_kronika.tex:3527:\item[Jednatelem:] Frant.\ Mrázek, o.~u.~Zimro Luda.
+stara_kronika.tex:3528:\item[Pokladníkem:] Ant.\ Figalla; o.~u.~Josef Buron.
+stara_kronika.tex:3529:\item[Matrikářem:] Otakar Schindler.
+stara_kronika.tex:3530:\item[Režisérem:] Inoš Osladil; o.~u.~Ant.\ Figalla.
+stara_kronika.tex:3531:\item[Archivářem:] Konečný Josef.
+stara_kronika.tex:3532:\item[Ostatní výb.:] Bárta Bohuš, Grünbaum Leoš, Bestová Lida.
+stara_kronika.tex:3533:\item[Zapisovatelem:] Buron Josef, Talver Vladimír.
+stara_kronika.tex:3534:\item[Hospodářem:] Buron Rudolf.
+stara_kronika.tex:3535:\item[Náhradníci:] Klos Antonín, Mika František vel.
+stara_kronika.tex:3536:\item[Smírčí soud:] Kozub František, Bárta Josef, Konečný Josef, Antonín Figalla.
+stara_kronika.tex:3537:\item[Vyslanci do župy:] Konečný Josef a~Zimro Luda.
+stara_kronika.tex:3559:\noindent V~Porubě 15.~března 1934.\\
+stara_kronika.tex:3560:\textbf{Antonín Figalla}\\
+stara_kronika.tex:3575:\begin{description}
+stara_kronika.tex:3576:\item[Starosta:] František Kozub, rolník.
+stara_kronika.tex:3577:\item[I.~místostarosta:] František Klos, mlynář.
+stara_kronika.tex:3578:\item[II.~místostarosta:] Božena Grünbaumová, manželka revisora.
+stara_kronika.tex:3579:\item[Náčelník:] Antonín Krejčí, železničář.
+stara_kronika.tex:3580:\item[Náčelnice:] Milada Kozubová, dcera starosty.
+stara_kronika.tex:3581:\item[Vzdělavatel:] Miloslav Dvořáček, technický úředník.
+stara_kronika.tex:3582:\item[Členové výboru:] Figalla Antonín (učitel), Bárta Bohuslav (rolník), Schindler Otakar (řídící školy), Konečný Josef (oficiál st.\ drah), Buroň Josef (dělník), Grünbaum Leoš (správce), Mika Isidor (dělník), Janíček Zdeněk (obch.\ zaměstnanec).
+stara_kronika.tex:3583:\item[Náhradníci:] Hajda Karel (úředník), Valder Vladimír (dělník), Mika Valoš, Dvořáčková Idéla (učitelka).
+stara_kronika.tex:3584:\item[Smírčí soud:] Kozub Frant., Figalla Ant., Bárta Josef a~Bárta Bohuš.
+stara_kronika.tex:3585:\item[Zástupci do župy:] jednatel a~náčelník.
+stara_kronika.tex:3586:\item[Revisoři účtů:] Klos Jaroslav a~Moral Frant.
+stara_kronika.tex:3587:\item[Kronikář:] Bárta Josef.
+stara_kronika.tex:3633:\begin{enumerate}
+stara_kronika.tex:3724:\noindent V~Porubě v~roce 1935.\\
+stara_kronika.tex:3729:\begin{center}
+stara_kronika.tex:3732:\textbf{Stvrzenka}\\
+stara_kronika.tex:3734:Za fotografie pro kroniku zaplatil Kč 40-50 h., obdržel Kč \dots h.\\
+stara_kronika.tex:3735:Kč čtyřicet korun padesát hal. 50/100\\
+stara_kronika.tex:3736:za vybráno na valné hromadě od členů\\
+stara_kronika.tex:3738:Dne 13./2. 1938\\
+stara_kronika.tex:3740:Pokladník: [Podpis] \hfill Podpis: [Podpis]\\
+stara_kronika.tex:3762:\begin{description}
+stara_kronika.tex:3763:\item[Starostou:] František Kozub.
+stara_kronika.tex:3764:\item[Jednatelem:] Zdeněk Janíček.
+stara_kronika.tex:3765:\item[Náčelníkem:] Mika Isidor.
+stara_kronika.tex:3766:\item[Náčelnicí:] Milada Kozubová.
+stara_kronika.tex:3767:\item[Vzdělavatelem:] Miloš Dvořáček.
+stara_kronika.tex:3822:\noindent Dokončeno 2.~února 1938.\\
+stara_kronika.tex:3825:\begin{novinovy-vystrizek}
+stara_kronika.tex:3840:\begin{center}
+stara_kronika.tex:3841:\textbf{konané na oslavu 40.letého trvání těl.~jed.\ Sokol Poruba u~Svinova,}\\
+stara_kronika.tex:3852:\begin{description}
+stara_kronika.tex:3853:\item[Zahájení a~uvítání přítomných] \dotfill Frant.\ Kozub
+stara_kronika.tex:3854:\item[Čtení došlých přípisu] \dotfill Zdena Janíček
+stara_kronika.tex:3855:\item[Čtení zápisu ustavující schůze] \dotfill Ant.\ Figalla
+stara_kronika.tex:3856:\item[Stručný přehled historie jednoty] \dotfill Ant.\ Figalla
+stara_kronika.tex:3857:\item[Vzpomínky ze života jednoty] \dotfill Adolf Bárta
+stara_kronika.tex:3858:\item[Předání plaket zakládajícím a~zasloužilým členům] \dotfill Ot.\ Schindler
+stara_kronika.tex:3859:\item[Projevy hostů] ~
+stara_kronika.tex:3860:\item[Odeslání telegramu Č.O.S.\ a~Sl.~Ž.M.S.] ~
+stara_kronika.tex:3861:\item[Státní hymny] ~
+stara_kronika.tex:3862:\item[Ukončení] \dotfill Frant.\ Kozub
+stara_kronika.tex:3871:\begin{flushright}
+stara_kronika.tex:3872:\textbf{František Kozub v.r.}\\
+stara_kronika.tex:3873:t.~č.\ starosta\\[1em]
+stara_kronika.tex:3874:\textbf{Zdena Janíček v.r.}\\
