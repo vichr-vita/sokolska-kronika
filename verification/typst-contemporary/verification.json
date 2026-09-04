@@ -1,0 +1,54 @@
+{
+  "pdf": "soucasna.pdf",
+  "bytes": 86670661,
+  "pages": 49,
+  "outlineEntries": 13,
+  "linkAnnotations": 13,
+  "scanRanges": [
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      11,
+      36
+    ]
+  ],
+  "photos": [
+    "scans/2025_05/IMG_20250321_105914.jpg",
+    "scans/2025_05/IMG_20250321_110010.jpg",
+    "scans/2025_05/IMG_20250321_110058.jpg",
+    "scans/2025_05/IMG_20250321_110152.jpg"
+  ],
+  "checks": {
+    "frozenSources": true,
+    "titlePage": true,
+    "frontMatterText": true,
+    "historicalOverviewText": true,
+    "headingHierarchy": true,
+    "emphasis": true,
+    "externalLinks": true,
+    "intentionalLineBreak": true,
+    "scanRanges": true,
+    "photoOrder": true,
+    "qpdfClean": true,
+    "typstVersion": true,
+    "documentMetadata": true,
+    "czechLanguage": true,
+    "a4Pages": true,
+    "outlineOrder": true,
+    "contentsLinks": true,
+    "externalLinkInPdf": true,
+    "scanBoundaries": true,
+    "directScanEmbedding": true,
+    "photoDimensions": true,
+    "ordinaryHeaderAndNumber": true,
+    "mediaPagesWithoutHeaders": true,
+    "finalImage": true
+  },
+  "allPassed": true
+}
