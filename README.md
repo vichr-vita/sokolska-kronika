@@ -38,6 +38,19 @@ out/soucasna_kronika_v3_0_0.pdf
 
 Verze 3 označuje vydání sázená v Typstu místo LaTeXu.
 
+## Publikace PDF
+
+Změny připravujte v pull requestech proti větvi `dev`. Sloučení `dev` do `master` spustí workflow `Publish PDFs`. Workflow sestaví obě kroniky, zkontroluje jejich PDF a zveřejní je jako novou GitHub Release. Spustí se také při jiném zápisu do `master`.
+
+Ve WordPressu stačí jednou nastavit odkazy na nejnovější vydání:
+
+```text
+https://github.com/vichr-vita/sokolska-kronika/releases/latest/download/predvalecna_kronika.pdf
+https://github.com/vichr-vita/sokolska-kronika/releases/latest/download/soucasna_kronika.pdf
+```
+
+Názvy souborů v release zůstávají stejné i při změně čísla verze v `build.sh`. Odkazy začnou fungovat po prvním úspěšném běhu workflow na `master`.
+
 Jedno vydání lze při práci přeložit přímo z kořene repozitáře:
 
 ```sh

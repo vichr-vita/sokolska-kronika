@@ -1,0 +1,66 @@
+name: Publish PDFs
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-pdfs
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Typst 0.15.1
+        run: |
+          curl --fail --location --retry 3 --output typst.tar.xz \
+            https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-unknown-linux-musl.tar.xz
+          echo 'a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c  typst.tar.xz' | sha256sum --check
+          tar -xf typst.tar.xz
+          sudo install -m 755 typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+          typst --version
+
+      - name: Build both chronicles
+        run: ./build.sh
+
+      - name: Check and name release files
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qpdf
+          shopt -s nullglob
+          prewar=(out/predvalecna_kronika_v*.pdf)
+          contemporary=(out/soucasna_kronika_v*.pdf)
+          test "${#prewar[@]}" -eq 1
+          test "${#contemporary[@]}" -eq 1
+          qpdf --check "${prewar[0]}"
+          qpdf --check "${contemporary[0]}"
+          install -Dm644 "${prewar[0]}" release/predvalecna_kronika.pdf
+          install -Dm644 "${contemporary[0]}" release/soucasna_kronika.pdf
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          tag="pdf-${GITHUB_SHA}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            if [[ "$(gh release view "$tag" --json isDraft --jq .isDraft)" == true ]]; then
+              gh release upload "$tag" release/*.pdf --clobber
+              gh release edit "$tag" --draft=false --latest
+            else
+              echo "Release $tag is already published."
+            fi
+          else
+            gh release create "$tag" release/*.pdf \
+              --target "$GITHUB_SHA" \
+              --title "Kroniky ${GITHUB_SHA:0:12}" \
+              --notes "PDF sestavená z commitu $GITHUB_SHA." \
+              --latest
+          fi
