@@ -17,17 +17,23 @@ ACCEPTED_SOURCE_SHA256 = {
   "chronicles/soucasna/main.typ" => "4e8d023f00ac3fcf3291df0e0de1ed3fd8b744aa59aa00646e093bed6a3a920e",
   "chronicles/soucasna/content/front-matter.typ" => "716ff1e18682b54e866b750a11069dfa8e950404177be0b2e07e7946d3a9ef20",
   "chronicles/soucasna/content/historical-overview.typ" => "f753da1279d786f69f05f1daa21d9eece93ad299fb223ef745b558f34ec3ecbb",
-  "chronicles/soucasna/content/scans.typ" => "8f3d6a958930cf1f53aa39afb287c2b69ad88e8664df3697c9a8bc58a7bb48ce",
+  "chronicles/soucasna/content/scans.typ" => "a87ed24288ba997b0b8e77b805b1b298875235c7b62bf11472b8685f852b8ea2",
 }.freeze
 ACCEPTED_CREDIT_SOURCE_SHA256 = "0af94f866ea00c3e4072a2f268773952e421af8530ce15287b1c907b03cec5be"
 ACCEPTED_CREDIT_TYPST_SHA256 = "e2b7b4ee2e9bdeb376a397a36b6346e9ec3108b3f73a06b7ac70fd2a203f6a94"
-ACCEPTED_SCAN_SHA256 = "293ff2ce7d7209c13067da93d0149d017e89305ef3a9b0d31a01aa44f3cd807f"
-ACCEPTED_SCAN_RANGES = [[1, 3], [4, 10], [11, 36]].freeze
-ACCEPTED_PHOTOS = %w[
-  scans/2025_05/IMG_20250321_105914.jpg
-  scans/2025_05/IMG_20250321_110010.jpg
-  scans/2025_05/IMG_20250321_110058.jpg
-  scans/2025_05/IMG_20250321_110152.jpg
+ACCEPTED_SCAN_SHA256 = {
+  "scans/nova_kronika_scans.pdf" => "293ff2ce7d7209c13067da93d0149d017e89305ef3a9b0d31a01aa44f3cd807f",
+  "scans/2026_07/kronika_2023-2025.pdf" => "5423591f35dce6136b43b5ddbd1901d918facbd56057c06a98ca55304fbf2ca5",
+  "scans/2026_07/kronika_2026.pdf" => "6de9a8c4471721ba2b6db3a1a307973274718952896693ffcf2961f21a1aeda0",
+}.freeze
+ACCEPTED_SCAN_RANGES = [
+  ["scans/nova_kronika_scans.pdf", 1, 3],
+  ["scans/nova_kronika_scans.pdf", 4, 10],
+  ["scans/nova_kronika_scans.pdf", 11, 20],
+  ["scans/2026_07/kronika_2023-2025.pdf", 1, 1],
+  ["scans/nova_kronika_scans.pdf", 22, 23],
+  ["scans/2026_07/kronika_2023-2025.pdf", 2, 24],
+  ["scans/2026_07/kronika_2026.pdf", 1, 7],
 ].freeze
 
 def run(*command)
@@ -125,8 +131,9 @@ actual_headings = typst_headings(front_lines + historical_lines + scan_lines)
 stable_headings = baseline_headings(SECTIONS)
 typst_links = front_lines.filter_map { |line| line[/#link\("([^"]+)"\)/, 1] }
 
-typst_ranges = scan_lines.join("\n").scan(/pdf-page-range\(\s*"\/scans\/nova_kronika_scans\.pdf",\s*(\d+),\s*(\d+)/m).map { |range| range.map(&:to_i) }
-typst_photos = scan_lines.filter_map { |line| line[%r{"/(scans/2025_05/[^"]+\.jpg)"}, 1] }
+typst_ranges = scan_lines.join("\n").scan(/pdf-page-range\(\s*"\/(scans\/[^"]+\.pdf)",\s*(\d+),\s*(\d+)/m).map do |path, first, last|
+  [path, first.to_i, last.to_i]
+end
 
 qpdf_check = run("qpdf", "--check", PDF)
 pdfinfo = run("pdfinfo", PDF)
@@ -140,16 +147,16 @@ link_count = pdf.fetch("qpdf").fetch(1).values.count do |entry|
 end
 
 output_images = image_rows(run("pdfimages", "-list", PDF))
-source_scan = File.join(ROOT, "scans/nova_kronika_scans.pdf")
-source_scan_images = image_rows(run("pdfimages", "-list", source_scan))
-embedded_scans = output_images[1, 36]
-scan_signature = ->(row) { row.values_at("width", "height", "color", "components", "bits", "encoding") }
-photo_dimensions = ACCEPTED_PHOTOS.map do |path|
-  run("identify", "-format", "%w %h", File.join(ROOT, path)).split.map(&:to_i)
+source_images = ACCEPTED_SCAN_SHA256.keys.to_h do |path|
+  [path, image_rows(run("pdfimages", "-list", File.join(ROOT, path)))]
 end
-embedded_photo_dimensions = output_images.last(4).map { |row| row.values_at("width", "height") }
+expected_scans = ACCEPTED_SCAN_RANGES.flat_map do |path, first, last|
+  source_images.fetch(path)[(first - 1)..(last - 1)]
+end
+embedded_scans = output_images.drop(1)
+scan_signature = ->(row) { row.values_at("width", "height", "color", "components", "bits", "encoding") }
 
-expected_media_pages = (4..6).to_a + (13..19).to_a + (21..50).to_a
+expected_media_pages = (4..6).to_a + (13..19).to_a + (21..63).to_a
 ordinary_page = run("pdftotext", "-layout", "-f", "7", "-l", "7", PDF, "-")
 media_text = expected_media_pages.flat_map do |page|
   run("pdftotext", "-f", page.to_s, "-l", page.to_s, PDF, "-").strip.empty? ? [] : [page]
@@ -157,7 +164,9 @@ end
 
 checks = {
   "acceptedTypstSources" => source_hashes == ACCEPTED_SOURCE_SHA256,
-  "frozenScanSource" => Digest::SHA256.file(source_scan).hexdigest == ACCEPTED_SCAN_SHA256,
+  "scanSources" => ACCEPTED_SCAN_SHA256.all? do |path, digest|
+    Digest::SHA256.file(File.join(ROOT, path)).hexdigest == digest
+  end,
   "titlePage" => front_lines.join("\n").include?("[Současná kronika]") && front_lines.join("\n").include?("subtitle: [TJ Sokol Poruba]") && front_lines.join("\n").include?('image-source: "/images/cover.jpg"') && front_lines.join("\n").include?("edition: [Digitální vydání]"),
   "frontMatterText" => Digest::SHA256.hexdigest(front_typst) == ACCEPTED_CREDIT_TYPST_SHA256,
   "creditSystemOnlyChange" => front_typst.scan(/\bTypst\b/).length == 1 && !front_typst.match?(/\bLaTeX\b/),
@@ -165,7 +174,6 @@ checks = {
   "externalLinks" => typst_links == ["https://github.com/vichr-vita/sokolska-kronika"],
   "intentionalLineBreak" => front_lines[34].end_with?("\\"),
   "scanRanges" => typst_ranges == ACCEPTED_SCAN_RANGES,
-  "photoOrder" => typst_photos == ACCEPTED_PHOTOS,
   "qpdfClean" => qpdf_check.include?("No syntax or stream encoding errors found"),
   "typstVersion" => pdfinfo.include?("Creator:         Typst 0.15.1"),
   "documentMetadata" => pdfinfo.include?("Title:           Současná kronika") && pdfinfo.include?("Author:          TJ Sokol Poruba"),
@@ -175,11 +183,10 @@ checks = {
   "contentsLinks" => link_count >= outlines.length,
   "externalLinkInPdf" => pdf_json_text.include?("https://github.com/vichr-vita/sokolska-kronika"),
   "scanBoundaries" => output_images.drop(1).map { |image| image["page"] } == expected_media_pages,
-  "directScanEmbedding" => embedded_scans.map(&scan_signature) == source_scan_images.map(&scan_signature),
-  "photoDimensions" => embedded_photo_dimensions == photo_dimensions,
+  "directScanEmbedding" => embedded_scans.map(&scan_signature) == expected_scans.map(&scan_signature),
   "ordinaryHeaderAndNumber" => ordinary_page.scan("Slovo autora sazby digitální kroniky").length >= 2 && ordinary_page.match?(/\b7\s*\z/),
   "mediaPagesWithoutHeaders" => media_text.empty?,
-  "finalImage" => output_images.last["page"] == pdf.fetch("pages").length && output_images.last.values_at("width", "height") == photo_dimensions.last,
+  "finalImage" => output_images.last["page"] == pdf.fetch("pages").length && scan_signature.call(output_images.last) == scan_signature.call(expected_scans.last),
 }
 
 report = {
@@ -189,7 +196,6 @@ report = {
   "outlineEntries" => outlines.length,
   "linkAnnotations" => link_count,
   "scanRanges" => typst_ranges,
-  "photos" => typst_photos,
   "creditComparison" => {
     "sourceSha256" => ACCEPTED_CREDIT_SOURCE_SHA256,
     "expectedTypstSha256" => ACCEPTED_CREDIT_TYPST_SHA256,

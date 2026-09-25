@@ -32,9 +32,11 @@ Skript přejde do kořene repozitáře, odstraní případné zastaralé cílov�
 Úspěšné sestavení vytvoří:
 
 ```text
-out/predvalecna_kronika_v2_0_0.pdf
-out/soucasna_kronika_v2_0_0.pdf
+out/predvalecna_kronika_v3_0_0.pdf
+out/soucasna_kronika_v3_0_0.pdf
 ```
+
+Verze 3 označuje vydání sázená v Typstu místo LaTeXu.
 
 Jedno vydání lze při práci přeložit přímo z kořene repozitáře:
 
@@ -108,8 +110,8 @@ Stránky zdrojového PDF vkládejte přímo:
 Po změně sestavte obě vydání pomocí `./build.sh`. Zaměřené kontroly PDF lze spustit takto:
 
 ```sh
-ruby verification/typst-prewar/verify_pdf.rb out/predvalecna_kronika_v2_0_0.pdf
-ruby verification/typst-contemporary/verify.rb out/soucasna_kronika_v2_0_0.pdf
+ruby verification/typst-prewar/verify_pdf.rb out/predvalecna_kronika_v3_0_0.pdf
+ruby verification/typst-contemporary/verify.rb out/soucasna_kronika_v3_0_0.pdf
 ```
 
-Kontroly současného vydání navíc porovnávají text, nadpisy, odkaz, zvýraznění, rozsahy skenů a pořadí fotografií se zmrazeným zdrojovým podkladem. Před odevzdáním vizuálně projděte změněné textové strany, hranice celostránkových médií a poslední stranu.
+Kontroly současného vydání navíc ověřují text, nadpisy, odkaz, zvýraznění, rozsahy skenů a pořadí vložených stran. Před odevzdáním vizuálně projděte změněné textové strany, hranice celostránkových médií a poslední stranu.

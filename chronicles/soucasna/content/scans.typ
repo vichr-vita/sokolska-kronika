@@ -1,4 +1,4 @@
-#import "../../shared/publication.typ": image-sequence, pdf-page-range
+#import "../../shared/publication.typ": pdf-page-range
 
 #let introductory-pages() = pdf-page-range(
   "/scans/nova_kronika_scans.pdf",
@@ -12,12 +12,10 @@
   pdf-page-range("/scans/nova_kronika_scans.pdf", 4, 10)
 
   heading(level: 1)[Současná kronika]
-  pdf-page-range("/scans/nova_kronika_scans.pdf", 11, 36)
-
-  image-sequence((
-    "/scans/2025_05/IMG_20250321_105914.jpg",
-    "/scans/2025_05/IMG_20250321_110010.jpg",
-    "/scans/2025_05/IMG_20250321_110058.jpg",
-    "/scans/2025_05/IMG_20250321_110152.jpg",
-  ))
+  pdf-page-range("/scans/nova_kronika_scans.pdf", 11, 20)
+  pdf-page-range("/scans/2026_07/kronika_2023-2025.pdf", 1, 1)
+  // These two pages fall between pages 1 and 2 of the newer scan.
+  pdf-page-range("/scans/nova_kronika_scans.pdf", 22, 23)
+  pdf-page-range("/scans/2026_07/kronika_2023-2025.pdf", 2, 24)
+  pdf-page-range("/scans/2026_07/kronika_2026.pdf", 1, 7)
 }

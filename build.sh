@@ -12,7 +12,7 @@ script_dir="${BASH_SOURCE[0]%/*}"
 repo_root="$(cd -- "$script_dir" && pwd)"
 cd -- "$repo_root"
 
-version="2_0_0"
+version="3_0_0"
 prewar_output="out/predvalecna_kronika_v${version}.pdf"
 contemporary_output="out/soucasna_kronika_v${version}.pdf"
 
