@@ -1,5 +1,8 @@
 # Kronika TJ Sokol Poruba
 
+[![Publikace PDF](https://github.com/vichr-vita/sokolska-kronika/actions/workflows/publish-pdfs.yml/badge.svg?branch=master)](https://github.com/vichr-vita/sokolska-kronika/actions/workflows/publish-pdfs.yml)
+[![Poslední vydání PDF](https://img.shields.io/github/v/release/vichr-vita/sokolska-kronika?label=PDF%20release)](https://github.com/vichr-vita/sokolska-kronika/releases/latest)
+
 Repozitář obsahuje zdrojové texty a média pro dvě digitální kroniky TJ Sokol Poruba:
 
 - předválečnou kroniku od založení jednoty do roku 1934;
